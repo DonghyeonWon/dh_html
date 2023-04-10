@@ -1,0 +1,187 @@
+#header {
+    position: relative;
+    width: 100%; height: 100px;
+    display: flex;
+    flex-flow: column wrap;
+    background: white;
+    box-shadow: 0 10px 20px 0 rgba(150,150,150,0.4);
+    overflow: hidden;
+    z-index: 99;
+}
+#header .header-container {
+    position: relative;
+    width: 1200px; height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#header #h-logo {
+    position: relative;
+    width: 100px; height: 50px;
+    background: #333;
+    color: #fff;
+}
+#header #h-menu {
+    position: relative;
+    width: auto; height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-self: center;
+}
+#header .h-menu-btn {
+    position: relative;
+    width: auto; height: 100%;
+}
+#header .h-menu-btn a {
+    position: relative;
+    width: auto; height: 100%;
+    padding: 0 24px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    color: #333;
+    font-size: 24px;
+}
+#header .h-menu-btn a:hover {
+    background: #3195ff;
+    color: #fff;
+    font-weight: 600;
+}
+#header #h-submenu {
+    position: relative;
+    width: auto; height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    grid-gap: 50px;
+}
+#header .h-submenu-btn {
+    position: relative;
+    width: auto; height: auto;
+}
+#header .h-submenu-btn a {
+    position: relative;
+    width: 50px; height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; align-items: center;
+    background: #333;
+    color: #fff;
+}
+
+/* 슬라이드 배너 영역 */
+#banner {
+    position: relative;
+    width: 100%; height: 600px;
+}
+/* 메인배너에 소속된 슬릭슬라이더 스타일시트 */
+#banner .mainBanner {
+    position: relative;
+    width: 100%; height: 100%;
+    background: olive;
+}
+
+/* 메인배너 페이지 이동 버튼 설정 */
+.mainBanner .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px; height: 60px;
+    display: flex; flex-direction: row;
+    background: transparent;
+    border: 2px solid #3195ff;
+    color: transparent;
+    outline: none;
+    border-radius: 1000px;
+    z-index: 99;
+}
+.mainBanner .slick-arrow.slick-prev {
+    left: 24px;
+}
+.mainBanner .slick-arrow.slick-next {
+    right: 24px;
+}
+
+/* 메인배너 페이지네이션 설정 */
+.mainBanner .slick-dots {
+    position: absolute;
+    display: flex; flex-direction: row;
+    grid-gap: 15px;
+    bottom: 24px; left: 50%;
+    transform: translateX(-50%);
+}
+.mainBanner .slick-dots li {
+    position: relative;
+    width: 15px; height: 15px;
+    background: #aaa;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.mainBanner .slick-dots .slick-active {
+    background: #3195ff;
+}
+.mainBanner .slick-dots button {
+    position: relative;
+    width: 100%; height: 100%;
+    margin: 0; padding: 0;
+    opacity: 0;
+}
+
+.mainBanner .slick-list {
+    position: relative;
+    width: 100%; height: 100%;
+}
+.mainBanner .slick-track {
+    position: relative;
+    width: 100%; height: 100%;
+}
+#banner .mainBanner .slide-wrapper {
+    position: relative;
+    width: 100%; height: 100%;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 24px;
+}
+.mainBanner .slide-wrapper:nth-child(2), .mainBanner .slide-wrapper:nth-child(5) {
+    background: orange;
+}
+.mainBanner .slide-wrapper:nth-child(3) {
+    background: tomato;
+}
+.mainBanner .slide-wrapper:first-child, .mainBanner .slide-wrapper:nth-child(4) {
+    background: skyblue;
+}
+#banner .mainBanner .slide-contents {
+    position: relative;
+    width: auto; height: 100%;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: flex-start;
+    grid-gap: 2rem;
+    grid-column: 3/11;
+}
+#banner .slide-contents .slide-title {
+    position: relative;
+    width: auto; height: auto;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+}
+#banner .slide-contents .slide-description {
+    position: relative;
+    width: auto; height: auto;
+    font-size: 2rem;
+    color: #333;
+    line-height: 1.2;
+}
+#banner .slide-contents .goNow {
+    position: relative;
+    display: block;
+    width: auto; height: auto;
+    padding: 1rem 1.4rem;
+    background: #3195ff;
+    color: #fff;
+    border-radius: 100px;
+    line-height: 1;
+}
