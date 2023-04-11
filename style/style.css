@@ -73,7 +73,7 @@
 /* 슬라이드 배너 영역 */
 #banner {
     position: relative;
-    width: 100%; height: 600px;
+    width: 100%; height: 800px;
 }
 /* 메인배너에 소속된 슬릭슬라이더 스타일시트 */
 #banner .mainBanner {
@@ -184,4 +184,79 @@
     color: #fff;
     border-radius: 100px;
     line-height: 1;
+}
+
+/* 사업영역 스타일 */
+#business {
+    position: relative;
+    width: 100%; height: auto;
+    padding: 100px 0;
+}
+#business .business-container {
+    position: relative;
+    width: 100%; height: auto;
+    padding: 0 24px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    grid-gap: 48px;
+}
+#business .section-title-area {
+    position: relative;
+    width: auto; height: auto;
+    padding-bottom: 24px;
+    display: flex;
+    flex-flow: column wrap;
+    grid-gap: 24px;
+}
+#business .section-title-area::after {
+    content: '';
+    position: absolute;
+    left: 50%; bottom: 0;
+    width: 350px; height: 2px;
+    background: #333;
+    transform: translateX(-50%);
+}
+#business .section-title-area .section-title {
+    position: relative;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+#business .section-title-area .section-description {
+    position: relative;
+    font-size: 1.4rem;
+    color: #333;
+    text-align: center;
+}
+#business .business-contents {
+    position: relative;
+    width: 100%; height: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 24px;
+}
+#business .business-item a {
+    position: relative;
+    width: auto; height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    grid-gap: 24px;
+}
+#business .business-thumb {
+    position: relative;
+    width: auto; height: 300px;
+    background: orange;
+}
+#business .business-name {
+    position: relative;
+    font-size: 1.8rem;
+    color: #333;
+}
+#business .business-description {
+    position: relative;
+    font-size: 1rem;
+    color: #666;
 }
