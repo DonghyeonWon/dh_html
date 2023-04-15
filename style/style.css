@@ -247,7 +247,7 @@
 }
 #business .business-thumb {
     position: relative;
-    width: auto; height: 300px;
+    width: auto;
     background: orange;
 }
 #business .business-name {
