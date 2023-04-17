@@ -5,8 +5,12 @@
 $(document).ready(function(){
     //사업영역 썸네일 오브젝트의 너비 받아옴
     var busiThumbWidth = $('.business-thumb').innerWidth();
+    //소셜영역 소셜아이콘 높이 받아옴
+    var socialIconHeight = $('.social-icon').innerHeight();
 
     //사업영역 썸네일 오브젝트의 높이값을 너비값과 동일하게 설정
     $('.business-thumb').innerHeight(busiThumbWidth);
+    //소셜영역 소셜아이콘 너비값을 높이값과 동일하게 설정
+    $('.social-icon').innerWidth(socialIconHeight);
     //console.log(busiThumbWidth);
 });

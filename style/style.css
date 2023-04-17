@@ -10,8 +10,8 @@
 }
 #header .header-container {
     position: relative;
-    width: 1200px; height: 100%;
-    margin: 0 auto;
+    width: 100%; height: 100%;
+    margin: 0 auto; padding: 0 24px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -248,7 +248,7 @@
 #business .business-thumb {
     position: relative;
     width: auto;
-    background: orange;
+    background: #333;
 }
 #business .business-name {
     position: relative;
@@ -259,4 +259,368 @@
     position: relative;
     font-size: 1rem;
     color: #666;
+}
+
+/* 새소식 영역 스타일 */
+#news {
+    position: relative;
+    width: 100%; height: auto;
+    padding: 100px 0;
+    background: #fafafa;
+}
+#news .news-container {
+    position: relative;
+    width: 100%; height: auto;
+    padding: 0 24px;
+    display: flex;
+    flex-flow: column wrap;
+    grid-gap: 48px;
+    align-items: center;
+}
+#news .section-title-area {
+    position: relative;
+    width: auto; height: auto;
+    padding-bottom: 24px;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    grid-gap: 24px;
+}
+#news .section-title-area::after {
+    content: '';
+    position: absolute;
+    left: 50%; bottom: 0;
+    width: 350px; height: 2px;
+    background: #333;
+    transform: translateX(-50%);
+}
+#news .section-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+}
+#news .section-description {
+    font-size: 1.4rem;
+    color: #333;
+}
+#news .news-contents {
+    position: relative;
+    width: 100%; height: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 24px;
+}
+#news .news-item {
+    position: relative;
+    width: auto; height: auto;
+}
+#news .news-item:nth-child(1) {
+    grid-column: 1/5;
+}
+#news .news-item:nth-child(2) {
+    grid-column: 5/9;
+}
+#news .news-item:nth-child(3) {
+    grid-column: 9/13;
+}
+#news .news-item a {
+    position: relative;
+    width: 100%; height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    grid-gap: 24px;
+}
+#news .news-thumb {
+    position: relative;
+    width: 100%; height: 0;
+    padding-bottom: 65%;
+    background: #333;
+}
+#news .news-title-area {
+    position: relative;
+    width: 100%; height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    grid-gap: 12px;
+}
+#news .news-title {
+    position: relative;
+    font-size: 1.8rem;
+    color: #333;
+}
+#news .news-description {
+    position: relative;
+    font-size: 1rem;
+    color: #666;
+}
+#news .news-date {
+    position: relative;
+    font-size: 1rem;
+    color: #333;
+}
+#news .section-more {
+    position: relative;
+    width: auto; height: auto;
+    align-self: flex-end;
+}
+#news .section-more a {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: underline;
+}
+
+/* 채용 영역 스타일 */
+/* 영역 자체 스타일 */
+#recruit {
+    position: relative;
+    width: 100%; height: auto;
+    padding: 100px 0;
+}
+#recruit .recruit-container {
+    position: relative;
+    width: 100%; height: auto;
+    padding: 0 24px;
+    display: flex;
+    flex-flow: column wrap;
+    grid-gap: 48px;
+}
+#recruit .section-title-area {
+    position: relative;
+    width: auto; height: auto;
+    padding-bottom: 24px;
+    display: flex;
+    flex-flow: column wrap;
+    grid-gap: 24px;
+    text-align: center;
+}
+#recruit .section-title-area::after {
+    content: '';
+    position: absolute;
+    left: 50%; bottom: 0px;
+    width: 350px; height: 2px;
+    background-color: #333;
+    transform: translateX(-50%);
+}
+#recruit .section-title {
+    position: relative;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+}
+#recruit .section-description {
+    position: relative;
+    font-size: 1.4rem;
+    color: #333;
+}
+#recruit .recruit-contents {
+    position: relative;
+    width: 100%; height: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 24px;
+}
+#recruit .recruit-item {
+    position: relative;
+    width: auto; height: auto;
+}
+#recruit .recruit-item:nth-child(1) {
+    grid-column: 1/5;
+}
+#recruit .recruit-item:nth-child(2) {
+    grid-column: 5/9;
+}
+#recruit .recruit-item:nth-child(3) {
+    grid-column: 9/13;
+}
+#recruit .recruit-item a {
+    position: relative;
+    width: 100%; height: 100%;
+    padding: 36px;
+    display: flex;
+    flex-flow: column wrap;
+    grid-gap: 24px;
+    border-radius: 10px;
+    /*box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;*/
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+#recruit .recruit-types {
+    position: relative;
+    width: auto; height: audo;
+    display: flex;
+    flex-flow: row wrap;
+    grid-gap: 24px;
+}
+#recruit .recruit-types > * {
+    position: relative;
+    width: auto; height: auto;
+    padding: 8px 8px 7px 8px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    line-height: 1;
+}
+#recruit .recruit-types .type {
+    border: 2px solid #51E739;
+    color: #51E739;
+}
+#recruit .recruit-types .career {
+    border: 2px solid #3195ff;
+    color: #3195ff;
+}
+#recruit .recruit-title {
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+}
+#recruit .recruit-limit {
+    position: relative;
+    font-size: 1rem;
+    color: #666;
+}
+#recruit .recruit-count {
+    position: relative;
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+#recruit .section-more {
+    position: relative;
+    width: auto; height: auto;
+    align-self: flex-end;
+}
+#recruit .section-more a {
+    position: relative;
+    width: auto; height: auto;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #333;
+    text-decoration: underline;
+}
+
+/* CS & 소셜 영역 스타일 */
+#custom {
+    position: relative;
+    width: 100%; height: auto;
+    padding: 100px 0;
+    background: #fafafa;
+}
+#custom .custom-container {
+    position: relative;
+    width: 100%; height: auto;
+    padding: 0 24px;
+    display: flex;
+    flex-flow: column wrap;
+    grid-gap: 48px;
+}
+#custom .section-title-area {
+    position: relative;
+    width: auto; height: auto;
+    padding-bottom: 24px;
+    display: flex;
+    flex-flow: column wrap;
+    grid-gap: 24px;
+    text-align: center;
+}
+#custom .section-title-area::after {
+    content: '';
+    position: absolute;
+    left: 50%; bottom: 0;
+    width: 350px; height: 2px;
+    background: #333;
+    transform: translateX(-50%);
+}
+#custom .section-title {
+    position: relative;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+}
+#custom .section-description {
+    position: relative;
+    font-size: 1.4rem;
+    color: #333;
+}
+#custom .custom-contents {
+    position: relative;
+    width: 100%; height: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 24px;
+}
+#custom .custom-cs {
+    position: relative;
+    width: auto; height: 500px;
+    padding: 48px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    grid-column: 1/9;
+    background: #fff;
+}
+#custom .cs-title-area {
+    position: relative;
+    width: auto; height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    grid-gap: 24px;
+    align-items: flex-start;
+}
+#custom .cs-title {
+    position: relative;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+}
+#custom .cs-description {
+    position: relative;
+    font-size: 1.4rem;
+    color: #333;
+}
+#custom .go-cs {
+    position: relative;
+    width: auto; height: auto;
+    padding: 16px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #333;
+}
+#custom .custom-social {
+    position: relative;
+    width: auto; height: auto;
+    grid-column: 9/13;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 24px;
+}
+#custom .social-item {
+    position: relative;
+    width: auto; height: auto;
+    padding: 24px;
+    display: flex;
+    flex-flow: row wrap;
+    grid-gap: 24px;
+    justify-content: flex-start;
+    align-items: center;
+    background: #fff;
+    transition: ease-in-out 0.2s all;
+}
+#custom .social-item:hover {
+    transform: translateY(-10px);
+}
+#custom .social-item .social-icon {
+    position: relative;
+    width: auto; height: 100%;
+    background: #333;
+}
+#custom .social-item .social-name {
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
 }
