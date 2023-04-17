@@ -190,7 +190,7 @@
 #business {
     position: relative;
     width: 100%; height: auto;
-    padding: 100px 0;
+    padding: 150px 0;
 }
 #business .business-container {
     position: relative;
@@ -265,7 +265,7 @@
 #news {
     position: relative;
     width: 100%; height: auto;
-    padding: 100px 0;
+    padding: 150px 0;
     background: #fafafa;
 }
 #news .news-container {
@@ -376,7 +376,7 @@
 #recruit {
     position: relative;
     width: 100%; height: auto;
-    padding: 100px 0;
+    padding: 150px 0;
 }
 #recruit .recruit-container {
     position: relative;
@@ -504,7 +504,7 @@
 #custom {
     position: relative;
     width: 100%; height: auto;
-    padding: 100px 0;
+    padding: 150px 0;
     background: #fafafa;
 }
 #custom .custom-container {
