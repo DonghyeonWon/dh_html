@@ -608,10 +608,12 @@
     justify-content: flex-start;
     align-items: center;
     background: #fff;
+    box-shadow: rgba(0,0,0,0);
     transition: ease-in-out 0.2s all;
 }
 #custom .social-item:hover {
     transform: translateY(-10px);
+    box-shadow: rgba(50, 50, 93, 0.15) 0px 3px 6px -2px, rgba(0, 0, 0, 0.2) 0px 3px 6px -3px;
 }
 #custom .social-item .social-icon {
     position: relative;
@@ -624,3 +626,61 @@
     font-weight: bold;
     color: #333;
 }
+
+/* 푸터 스타일 영역 */
+#footer {
+    position: relative;
+    width: 100%; height: auto;
+    padding: 150px 0;
+}
+#footer .footer-container {
+    position: relative;
+    width: 100%; height: auto;
+    padding: 0 24px;
+    display: flex;
+    flex-flow: column wrap;
+    grid-gap: 48px;
+}
+#footer .footer-top {
+    position: relative;
+    width: 100%; height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    grid-gap: 48px;
+}
+#footer #footer-icon {
+    position: relative;
+    width: 100px; height: 100%;
+    background: #333;
+}
+#footer .devine-vertical {
+    position: relative;
+    width: 2px; height: 100%;
+    background: #666;
+}
+#footer .footer-menu {
+    position: relative;
+    width: auto; height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+#footer .footer-menu li {
+    position: relative;
+}
+#footer .footer-menu li:not(:last-child)::after {
+    content: '|';
+    position: relative;
+    margin: 0 1.4rem;
+    color: #666;
+}
+#footer .footer-menu li.bold {
+    font-weight: bold;
+}
+#footer .footer-menu a {
+    color: #666;
+}
+#footer .footer-menu li.bold a {
+    color: #333;
+}
+/* 푸터 스타일 영역 **/
