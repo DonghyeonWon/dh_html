@@ -635,8 +635,9 @@
 }
 #footer .footer-container {
     position: relative;
-    width: 100%; height: auto;
+    width: auto; height: auto;
     padding: 0 24px;
+    margin: 0 auto;
     display: flex;
     flex-flow: column wrap;
     grid-gap: 48px;
@@ -682,5 +683,27 @@
 }
 #footer .footer-menu li.bold a {
     color: #333;
+}
+
+#footer .footer-bottom {
+    position: relative;
+    width: auto; height: auto;
+}
+#footer .footer-information {
+    position: relative;
+    width: auto; height: auto;
+    display: flex; flex-flow: column wrap;
+    grid-gap: 16px;
+    color: #666;
+}
+#footer .footer-information .footer-info {
+    position: relative;
+    display: flex; flex-flow: row wrap;
+}
+#footer .footer-information .footer-info:not(:last-child) li:not(:last-child)::after {
+    content: '|';
+    font-size: 1;
+    padding: 0 8px;
+    font-weight: bold;
 }
 /* 푸터 스타일 영역 **/
