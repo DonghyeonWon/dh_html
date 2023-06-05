@@ -642,4 +642,123 @@
     flex-flow: column wrap;
     grid-gap: 48px;
 }
+#footer .footer-top {
+    position: relative;
+    width: auto; height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 48px;
+}
+#footer #footer-logo {
+    position: relative;
+    width: auto; height: auto;
+}
+#footer #footer-logo img {
+    width: 100px; height: 50px;
+}
+#footer .f-vertical {
+    position: relative;
+    width: 1px; height: 50px;
+    background: #333;
+}
+#footer .footer-topMenu {
+    position: relative;
+    width: auto; height: auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+#footer .footer-topMenu a {
+    color: #666;
+}
+#footer .footer-topMenu li:not(:last-child)::after {
+    content: '|';
+    padding: 0 16px;
+    color: #666;
+}
+#footer .footer-topMenu .bolder {
+    font-weight: bold;
+    color: #333;
+}
+
+#footer .footer-subpages {
+    position: relative;
+    width: auto; height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    grid-gap: 150px;
+}
+#footer .footer-depth {
+    position: relative;
+    width: auto; height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    grid-gap: 16px;
+}
+#footer .sub-title a{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+}
+#footer .sub-normal a {
+    font-size: 1rem;
+    color: #666;
+}
+#footer .f-horizontal {
+    position: relative;
+    width: 100%; height: 1px;
+    background: #aaa;
+}
+#footer .footer-socials {
+    position: relative;
+    width: auto; height: auto;
+}
+#footer .social-lists {
+    position: relative;
+    width: auto; height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    grid-gap: 16px;
+}
+#footer .social-lists .f-socialItem {
+    position: relative;
+    width: auto; height: auto;
+}
+#footer .f-socialItem a {
+    position: relative;
+    width: auto; height: auto;
+}
+#footer .f-socialItem a img {
+    position: relative;
+    display: block;
+    width: 32px; height: 32px;
+    background: #333;
+}
+#footer .footer-siteInfo {
+    position: relative;
+    width: auto; height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    grid-gap: 0.8rem;
+}
+#footer .f-infoLine {
+    position: relative;
+    width: auto; height: auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+#footer .f-infoLine li {
+    font-size: 0.8rem;
+    color: #666;
+}
+#footer .f-infoLine li:not(:last-child)::after {
+    content: '|';
+    font-size: 0.8rem;
+    padding: 0 0.8rem;
+}
 /* 푸터 스타일 영역 **/
