@@ -1,5 +1,6 @@
 #header {
-    position: relative;
+    position: absolute;
+    top: 0;
     width: 100%; height: 100px;
     display: flex;
     flex-flow: column wrap;
@@ -7,10 +8,14 @@
     box-shadow: 0 10px 20px 0 rgba(150,150,150,0.4);
     overflow: hidden;
     z-index: 99;
+    transition: all ease-in-out 0.2s;
+}
+#header.active {
+    height: 350px;
 }
 #header .header-container {
     position: relative;
-    width: 100%; height: 100%;
+    width: 100%; height: 100px;
     margin: 0 auto; padding: 0 24px;
     display: flex;
     flex-flow: row wrap;
@@ -19,9 +24,12 @@
 }
 #header #h-logo {
     position: relative;
-    width: 100px; height: 50px;
-    background: #333;
+    width: auto; height: 50px;
     color: #fff;
+}
+#header #h-logo img {
+    position: relative;
+    height: 100%;
 }
 #header #h-menu {
     position: relative;
@@ -34,7 +42,7 @@
     position: relative;
     width: auto; height: 100%;
 }
-#header .h-menu-btn a {
+#header .h-menu-btn>a {
     position: relative;
     width: auto; height: 100%;
     padding: 0 24px;
@@ -44,10 +52,40 @@
     color: #333;
     font-size: 24px;
 }
-#header .h-menu-btn a:hover {
+#header .h-menu-btn>a::after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 0px;
+    left: 0; bottom: 0;
     background: #3195ff;
-    color: #fff;
-    font-weight: 600;
+    transition: all ease-in-out 0.2s;
+}
+#header .h-menu-btn a:hover::after {
+    height: 3px;
+}
+#header .h-depth-2 {
+    position: relative;
+    padding-top: 16px;
+    display: flex;
+    flex-flow: column wrap;
+}
+#header .h-d2-item {
+    position: relative;
+    width: 100%; height: auto;
+}
+#header .h-d2-item a {
+    position: relative;
+    display: block;
+    width: 100%; height: auto;
+    padding: 16px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 400;
+    transition: all ease-in-out 0.2s;
+}
+#header .h-d2-item a:hover {
+    color: #3195ff;
 }
 #header #h-submenu {
     position: relative;
@@ -58,21 +96,25 @@
 }
 #header .h-submenu-btn {
     position: relative;
-    width: auto; height: auto;
-}
-#header .h-submenu-btn a {
-    position: relative;
-    width: 50px; height: 50px;
+    width: 30px; height: 30px;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center; align-items: center;
-    background: #333;
-    color: #fff;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#header .h-submenu-btn:nth-child(2) {
+    display: none;
+}
+.h-submenu-btn img {
+    position: relative;
+    width: 100%; height: auto;
 }
 
 /* 슬라이드 배너 영역 */
 #banner {
     position: relative;
+    margin-top: 100px;
     width: 100%; height: 800px;
 }
 /* 메인배너에 소속된 슬릭슬라이더 스타일시트 */
@@ -90,17 +132,26 @@
     width: 60px; height: 60px;
     display: flex; flex-direction: row;
     background: transparent;
-    border: 2px solid #3195ff;
+    border: none;
     color: transparent;
     outline: none;
     border-radius: 1000px;
     z-index: 99;
+    cursor: pointer;
 }
 .mainBanner .slick-arrow.slick-prev {
     left: 24px;
+    background-image: url(../source/img/icons/banner_prev.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%;
 }
 .mainBanner .slick-arrow.slick-next {
     right: 24px;
+    background-image: url(../source/img/icons/banner_next.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%;
 }
 
 /* 메인배너 페이지네이션 설정 */
@@ -144,14 +195,27 @@
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 24px;
 }
+.slide-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 0;
+}
 .mainBanner .slide-wrapper:nth-child(2), .mainBanner .slide-wrapper:nth-child(5) {
-    background: orange;
+    background-image: url(../source/img/main/banner01.jpg);
+    background-position: center center;
+    background-size: cover;
 }
 .mainBanner .slide-wrapper:nth-child(3) {
-    background: tomato;
+    background-image: url(../source/img/main/banner02.jpg);
+    background-position: center center;
+    background-size: cover;
 }
 .mainBanner .slide-wrapper:first-child, .mainBanner .slide-wrapper:nth-child(4) {
-    background: skyblue;
+    background-image: url(../source/img/main/banner03.jpg);
+    background-position: center center;
+    background-size: cover;
 }
 #banner .mainBanner .slide-contents {
     position: relative;
@@ -160,20 +224,22 @@
     justify-content: center; align-items: flex-start;
     grid-gap: 2rem;
     grid-column: 3/11;
+    z-index: 50;
 }
 #banner .slide-contents .slide-title {
     position: relative;
     width: auto; height: auto;
     font-size: 4rem;
     font-weight: bold;
-    color: #333;
+    color: #fff;
 }
 #banner .slide-contents .slide-description {
     position: relative;
     width: auto; height: auto;
-    font-size: 2rem;
-    color: #333;
-    line-height: 1.2;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.4;
 }
 #banner .slide-contents .goNow {
     position: relative;
@@ -235,7 +301,7 @@
     width: 100%; height: auto;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr;
     grid-gap: 24px;
 }
 #business .business-item a {
@@ -243,22 +309,60 @@
     width: auto; height: auto;
     display: flex;
     flex-flow: column wrap;
-    grid-gap: 24px;
+    justify-content: flex-end;
+}
+#business .business-item a::after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    background: linear-gradient(transparent, rgba(49,149,255,0.1), rgba(49,149,255,0.7));
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+}
+#business .business-item:hover a::after {
+    opacity: 1;
 }
 #business .business-thumb {
     position: relative;
     width: auto;
-    background: #333;
+    background-position: center center;
+    background-size: cover;
+}
+#business .business-thumb.thumb01 {
+    background-image: url(../source/img/main/business_archi.jpg);
+}
+#business .business-thumb.thumb02 {
+    background-image: url(../source/img/main/business_house.jpg);
+}
+#business .business-thumb.thumb03 {
+    background-image: url(../source/img/main/business_engineering.jpg);
+}
+#business .business-thumb.thumb04 {
+    background-image: url(../source/img/main/business_park.jpg);
+}
+#business .business-details {
+    position: absolute;
+    width: 100%; height: 50%;
+    padding: 0 24px 24px 24px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    grid-gap: 24px;
+    z-index: 50;
 }
 #business .business-name {
     position: relative;
-    font-size: 1.8rem;
-    color: #333;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
 }
 #business .business-description {
     position: relative;
     font-size: 1rem;
-    color: #666;
+    line-height: 1.4;
+    text-align: center;
+    color: #fff;
 }
 
 /* 새소식 영역 스타일 */
@@ -336,6 +440,18 @@
     width: 100%; height: 0;
     padding-bottom: 65%;
     background: #333;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#news .news-item:nth-child(1) .news-thumb {
+    background-image: url(../source/img/main/news01.jpg);
+}
+#news .news-item:nth-child(2) .news-thumb {
+    background-image: url(../source/img/main/news02.jpg);
+}
+#news .news-item:nth-child(3) .news-thumb {
+    background-image: url(../source/img/main/news03.jpg);
 }
 #news .news-title-area {
     position: relative;
@@ -352,6 +468,12 @@
 #news .news-description {
     position: relative;
     font-size: 1rem;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     color: #666;
 }
 #news .news-date {
@@ -560,7 +682,21 @@
     justify-content: space-between;
     align-items: flex-end;
     grid-column: 1/9;
-    background: #fff;
+    background: url(../source/img/main/cs.webp) no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+    transition: all ease-in-out 0.2s;
+}
+#custom .custom-cs:hover {
+    background-size: 110%;
+}
+#custom .custom-cs::after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    left: 0; top: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 0;
 }
 #custom .cs-title-area {
     position: relative;
@@ -569,17 +705,18 @@
     flex-flow: column wrap;
     grid-gap: 24px;
     align-items: flex-start;
+    z-index: 50;
 }
 #custom .cs-title {
     position: relative;
     font-size: 4rem;
     font-weight: bold;
-    color: #333;
+    color: #fff;
 }
 #custom .cs-description {
     position: relative;
     font-size: 1.4rem;
-    color: #333;
+    color: #fff;
 }
 #custom .go-cs {
     position: relative;
@@ -587,7 +724,8 @@
     padding: 16px;
     font-size: 1.2rem;
     color: #fff;
-    background: #333;
+    background: #3195ff;
+    z-index: 50;
 }
 #custom .custom-social {
     position: relative;
@@ -618,7 +756,22 @@
 #custom .social-item .social-icon {
     position: relative;
     width: auto; height: 100%;
-    background: #333;
+    background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+.social-item.youtube .social-icon {
+    background-image: url(../source/img/icons/youtube.png);
+    
+}
+.social-item.kakao .social-icon {
+    background-image: url(../source/img/icons/kakao.png);
+}
+.social-item.instagram .social-icon {
+    background-image: url(../source/img/icons/instagram.png);
+}
+.social-item.twitter .social-icon {
+    background-image: url(../source/img/icons/twitter.png);
 }
 #custom .social-item .social-name {
     position: relative;
@@ -656,7 +809,7 @@
     width: auto; height: auto;
 }
 #footer #footer-logo img {
-    width: 100px; height: 50px;
+    width: auto; height: 50px;
 }
 #footer .f-vertical {
     position: relative;
@@ -671,6 +824,9 @@
 }
 #footer .footer-topMenu a {
     color: #666;
+}
+#footer .footer-topMenu a:hover {
+    color: #3195ff;
 }
 #footer .footer-topMenu li:not(:last-child)::after {
     content: '|';
@@ -707,6 +863,9 @@
     font-size: 1rem;
     color: #666;
 }
+#footer .footer-depth a:hover {
+    color: #3195ff;
+}
 #footer .f-horizontal {
     position: relative;
     width: 100%; height: 1px;
@@ -722,7 +881,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    grid-gap: 16px;
+    grid-gap: 2rem;
 }
 #footer .social-lists .f-socialItem {
     position: relative;
@@ -730,13 +889,23 @@
 }
 #footer .f-socialItem a {
     position: relative;
-    width: auto; height: auto;
-}
-#footer .f-socialItem a img {
-    position: relative;
     display: block;
     width: 32px; height: 32px;
-    background: #333;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+}
+.f-socialItem.youtube a {
+    background-image: url(../source/img/icons/youtube.png);
+}
+.f-socialItem.kakao a {
+    background-image: url(../source/img/icons/kakao.png);
+}
+.f-socialItem.instagram a {
+    background-image: url(../source//img/icons/instagram.png);
+}
+.f-socialItem.twitter a {
+    background-image: url(../source/img/icons/twitter.png);
 }
 #footer .footer-siteInfo {
     position: relative;
