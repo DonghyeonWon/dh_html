@@ -42,6 +42,17 @@
     position: relative;
     width: auto; height: 100%;
 }
+#header .h-menu-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 0px;
+    left: 0; bottom: 0;
+    background: #3195ff;
+    transition: all ease-in-out 0.2s;
+}
+#header .h-menu-btn:hover::after {
+    height: 3px;
+}
 #header .h-menu-btn>a {
     position: relative;
     width: auto; height: 100%;
@@ -51,17 +62,6 @@
     justify-content: center;
     color: #333;
     font-size: 24px;
-}
-#header .h-menu-btn>a::after {
-    content: '';
-    position: absolute;
-    width: 100%; height: 0px;
-    left: 0; bottom: 0;
-    background: #3195ff;
-    transition: all ease-in-out 0.2s;
-}
-#header .h-menu-btn a:hover::after {
-    height: 3px;
 }
 #header .h-depth-2 {
     position: relative;
@@ -432,9 +432,11 @@
 #news .news-item a {
     position: relative;
     width: 100%; height: auto;
+    padding-bottom: 24px;
     display: flex;
     flex-flow: column wrap;
     grid-gap: 16px;
+    background: #fff;
 }
 #news .news-thumb {
     position: relative;
@@ -456,6 +458,7 @@
 #news .news-title-area {
     position: relative;
     width: 100%; height: auto;
+    padding: 0 24px;
     display: flex;
     flex-flow: column wrap;
     grid-gap: 0.4rem;
@@ -484,13 +487,14 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    color: #666;
+    color: #999;
 }
 #news .news-item a:hover .news-description {
     color: #3195ff;
 }
 #news .news-date {
     position: relative;
+    padding: 0 24px;
     font-size: 1rem;
     color: #333;
 }
@@ -668,7 +672,7 @@
     position: relative;
     font-size: 1rem;
     line-height: 1.4;
-    color: #aaa;
+    color: #999;
 }
 #recruit .recruit-item a:hover .recruit-limit {
     color: #3195ff;
