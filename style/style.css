@@ -115,11 +115,13 @@
 #banner {
     position: relative;
     margin-top: 100px;
-    width: 100%; height: 800px;
+    padding-bottom: 55%;
+    width: 100%; height: 0;
+    overflow: hidden;
 }
 /* 메인배너에 소속된 슬릭슬라이더 스타일시트 */
 #banner .mainBanner {
-    position: relative;
+    position: absolute;
     width: 100%; height: 100%;
     background: olive;
 }
@@ -229,7 +231,7 @@
     position: relative;
     width: auto; height: auto;
     font-size: 4rem;
-    font-weight: bold;
+    font-weight: 500;
     color: #fff;
 }
 #banner .slide-contents .slide-description {
@@ -244,11 +246,16 @@
     position: relative;
     display: block;
     width: auto; height: auto;
-    padding: 1rem 1.4rem;
-    background: #3195ff;
+    padding: 1.2rem 1.4rem;
     color: #fff;
-    border-radius: 100px;
     line-height: 1;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    transition: 0.2s all ease-in-out;
+}
+#banner .goNow:hover {
+    background: #3195ff;
+    border: 1px solid #3195ff;
 }
 
 /* 사업영역 스타일 */
@@ -323,7 +330,8 @@
 }
 #business .business-thumb {
     position: relative;
-    width: auto;
+    width: auto; height: 0;
+    padding-bottom: 140%;
     background-position: center center;
     background-size: cover;
 }
@@ -431,7 +439,7 @@
 }
 #news .news-item a {
     position: relative;
-    width: 100%; height: auto;
+    width: 100%; height: 100%;
     padding-bottom: 24px;
     display: flex;
     flex-flow: column wrap;
@@ -601,12 +609,14 @@
 }
 #recruit .recruit-thumbnail {
     position: relative;
-    width: 100%;
+    width: 100%; height: 0;
+    padding-bottom: 120%;
     background: #ccc;
     background-size: auto 100%;
     background-position: center center;
     background-repeat: no-repeat;
     transition: all ease-in-out 0.2s;
+    overflow: hidden;
 }
 #recruit .recruit-item a:hover .recruit-thumbnail {
     background-size: auto 110%;
@@ -763,13 +773,8 @@
     justify-content: space-between;
     align-items: flex-end;
     grid-column: 1/9;
-    background: url(../source/img/main/cs.webp) no-repeat;
-    background-position: center center;
-    background-size: 100% auto;
     transition: all ease-in-out 0.2s;
-}
-#custom .custom-cs:hover {
-    background-size: 110%;
+    overflow: hidden;
 }
 #custom .custom-cs::after {
     content: '';
@@ -777,7 +782,23 @@
     width: 100%; height: 100%;
     left: 0; top: 0;
     background: rgba(0,0,0,0.4);
-    z-index: 0;
+    z-index: 15;
+}
+#custom .custom-cs-background {
+    position: absolute;
+    width: 100%; height: auto;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%) scale(100%);
+    z-index: 1;
+}
+#custom .custom-cs-details {
+    position: relative;
+    width: 100%; height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 50;
 }
 #custom .cs-title-area {
     position: relative;
@@ -790,8 +811,8 @@
 }
 #custom .cs-title {
     position: relative;
-    font-size: 4rem;
-    font-weight: bold;
+    font-size: 3rem;
+    font-weight: 500;
     color: #fff;
 }
 #custom .cs-description {
@@ -802,11 +823,17 @@
 #custom .go-cs {
     position: relative;
     width: auto; height: auto;
-    padding: 16px;
-    font-size: 1.2rem;
+    padding: 1rem 1.3rem;
+    font-size: 1rem;
     color: #fff;
-    background: #3195ff;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    transition: 0.2s all ease-in-out;
     z-index: 50;
+}
+#custom .go-cs:hover {
+    border: 1px solid #3195ff;
+    background: #3195ff;
 }
 #custom .custom-social {
     position: relative;
@@ -1012,3 +1039,108 @@
     padding: 0 0.8rem;
 }
 /* 푸터 스타일 영역 **/
+
+/* 1025 ~ 1200px 해상도 반응형 **/
+@media (max-width : 1200px) {
+    /* 배너 섹션 **/
+    #banner .slide-contents .slide-title {
+        font-size: 3.5rem;
+        font-weight: 400;
+    }
+    #banner .slide-contents .slide-description {
+        font-size: 1.4rem;
+    }
+    #banner .slide-contents .goNow {
+        padding: 1rem 1.3rem;
+    }
+
+    /* 사업영역 섹션 **/
+    #business .section-title-area .section-title {
+        font-size: 3.5rem;
+    }
+    #business .business-contents {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    #business .business-thumb {
+        padding-bottom: 70%;
+    }
+
+    /* 새소식 섹션 **/
+    #news .section-title {
+        font-size: 3.5rem;
+    }
+    #news .news-title {
+        font-size: 1.2rem;
+    }
+    #news .news-description {
+        font-size: 0.8rem;
+    }
+    #news .news-date {
+        font-size: 0.8rem;
+    }
+    #news .section-more a {
+        font-size: 1.2rem;
+    }
+
+    /* 채용안내 섹션 **/
+    #recruit .section-title {
+        font-size: 3.5rem;
+    }
+    #recruit .recruit-title {
+        font-size: 1.2rem;
+    }
+    #recruit .recruit-limit {
+        font-size: 0.8rem;
+    }
+    #recruit .recruit-count {
+        font-size: 0.8rem;
+    }
+    #recruit .recruit-types > * {
+        padding: 6px;
+        font-weight: 500;
+    }
+    #recruit .section-more a {
+        font-size: 1.2rem;
+    }
+
+    /* cs 소셜 섹션 **/
+    #custom .section-title {
+        font-size: 3.5rem;
+    }
+    #custom .custom-cs {
+        display: block;
+        height: 0;
+        padding: 0;
+        padding-bottom: 60%;
+        grid-column: 1/8;
+    }
+    #custom .cs-title-area {
+        grid-gap: 16px;
+    }
+    #custom .custom-cs-details {
+        position: absolute;
+        bottom: 0;
+        padding: 2rem;
+        flex-flow: column wrap;
+        justify-content: normal;
+        align-items: flex-start;
+        grid-gap: 16px;
+    }
+    #custom .cs-title {
+        font-size: 2.5rem;
+    }
+    #custom .cs-description {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+    #custom .custom-social {
+        grid-column: 8/13;
+    }
+    #custom .social-item .social-icon {
+        background-size: 85%;
+    }
+    #custom .social-item .social-name {
+        font-size: 1.2rem;
+    }
+}
