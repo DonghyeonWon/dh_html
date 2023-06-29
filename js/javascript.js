@@ -28,4 +28,19 @@ $(document).ready(function(){
     //소셜영역 소셜아이콘 너비값을 높이값과 동일하게 설정
     $('.social-icon').innerWidth(socialIconHeight);
     //console.log(busiThumbWidth);
+
+    //모바일 ~ 태블릿 관련 기능
+    //GNB 여닫기
+    $('.h-submenu-btn.h-menu').click(function(){
+        $('#m-gnb').addClass('active');
+    });
+    $('#m-gnb .m-gnb-close img').click(function(){
+        $('#m-gnb').removeClass('active');
+    });
+
+    //GNB 세부메뉴 여닫기
+    $('#m-gnb .m-d1-item').click(function(){
+        $(this).siblings().removeClass('active');
+        $(this).toggleClass('active');
+    });
 });

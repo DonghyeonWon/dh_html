@@ -1,3 +1,15 @@
+#m-gnb {
+    position: fixed;
+    top: 0; right: -100%;
+    display: block;
+    width: 480px; height: 100%;
+    background: #3195ff;
+    overflow: hidden;
+    box-shadow: rgba(0,0,0,0);
+    z-index: 99;
+    transition: 0.2s all ease-in-out;
+}
+
 #header {
     position: absolute;
     top: 0;
@@ -7,7 +19,7 @@
     background: white;
     box-shadow: 0 10px 20px 0 rgba(150,150,150,0.4);
     overflow: hidden;
-    z-index: 99;
+    z-index: 90;
     transition: all ease-in-out 0.2s;
 }
 #header.active {
@@ -137,7 +149,7 @@
     border: none;
     color: transparent;
     outline: none;
-    z-index: 99;
+    z-index: 85;
     cursor: pointer;
 }
 .mainBanner .slick-arrow.slick-prev {
@@ -1137,10 +1149,132 @@
     #custom .custom-social {
         grid-column: 8/13;
     }
+    #custom .social-item {
+        padding: 20px;
+    }
     #custom .social-item .social-icon {
         background-size: 85%;
     }
     #custom .social-item .social-name {
         font-size: 1.2rem;
+    }
+}
+
+/* 769 ~ 1200px 해상도 반응형 **/
+@media (max-width: 1024px) {
+    /* 모바일 태블릿 GNB **/
+    #m-gnb.active {
+        right: 0;
+        box-shadow: -4px 0 8px rgba(0, 0, 0, 0.3);
+    }
+    #m-gnb .m-gnb-container {
+        position: relative;
+        width: 100%; height: 100%;
+        display: flex;
+        flex-flow: column;
+        overflow-y: scroll;
+    }
+    #m-gnb .m-gnb-close {
+        position: relative;
+        width: 100%; height: auto;
+        padding: 24px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+    }
+    #m-gnb .m-gnb-close img {
+        position: relative;
+        width: 30px; height: 30px;
+        cursor: pointer;
+    }
+    #m-gnb .m-gnb-d1 {
+        position: relative;
+        width: 100%; height: auto;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    #m-gnb .m-d1-item {
+        position: relative;
+        width: 100%; height: fit-content;
+    }
+    #m-gnb .m-d1-item .m-gnb-category {
+        position: relative;
+        display: flex;
+        width: 100%; height: auto;
+        padding: 1rem 2rem;
+        flex-flow: row wrap;
+        align-items: center;
+        grid-gap: 16px;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1;
+        color: #fff;
+        cursor: pointer;
+    }
+    #m-gnb .m-d1-item .m-gnb-category img {
+        position: relative;
+        width: auto; height: 20px;
+        overflow: hidden;
+        transform: rotate(90deg);
+        transition: 0.2s all ease-in-out;
+    }
+    #m-gnb .m-d1-item.active .m-gnb-category img {
+        transform: rotate(0deg);
+    }
+    #m-gnb .m-gnb-d2 {
+        position: relative;
+        width: 100%; height: auto;
+        max-height: 0px;
+        display: flex;
+        flex-flow: column;
+        overflow: hidden;
+        transition: 0.2s all ease-in-out;
+    }
+    #m-gnb .m-d1-item.active .m-gnb-d2 {
+        max-height: 180px;
+    }
+    #m-gnb .m-d2-item {
+        position: relative;
+        width: 100%; height: auto;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #m-gnb .m-d2-item a {
+        position: relative;
+        width: 100%; height: auto;
+        padding: 0.8rem 3rem;
+        display: flex;
+        flex-flow: row wrap;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #f0f0f0;
+    }
+
+    /* 헤더 섹션 **/
+    #header {
+        height: 85px;
+    }
+    #header .header-container {
+        height: 100%;
+    }
+    #header #h-logo {
+        height: 60%;
+    }
+    #header #h-menu {
+        display: none;
+    }
+    #header #h-submenu {
+        grid-gap: 30px;
+    }
+    #header .h-submenu-btn:nth-child(2) {
+        display: flex;
+    }
+
+    /* 배너 섹션 **/
+    #banner {
+        margin-top: 80px;
+    }
+    .mainBanner .slick-arrow {
+        display: none !important;
     }
 }
