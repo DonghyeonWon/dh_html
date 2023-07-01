@@ -1252,7 +1252,12 @@
 
     /* 헤더 섹션 **/
     #header {
+        position: fixed;
         height: 85px;
+    }
+    #header.hidden {
+        top: -85px;
+        box-shadow: none;
     }
     #header .header-container {
         height: 100%;
@@ -1272,9 +1277,38 @@
 
     /* 배너 섹션 **/
     #banner {
-        margin-top: 80px;
+        margin-top: 85px;
+    }
+    #banner .mainBanner .slide-contents {
+        grid-column: 2/12;
+    }
+    #banner .slide-contents .slide-title {
+        font-size: 3rem;
+    }
+    #banner .slide-contents .slide-description {
+        font-size: 1.2rem;
+    }
+    #banner .slide-contents .goNow {
+        font-size: 0.8rem;
     }
     .mainBanner .slick-arrow {
         display: none !important;
+    }
+
+    /* 사업영역 섹션 **/
+    #business .business-item a::after {
+        background: rgba(0, 0, 0, 0.2);
+        opacity: 1;
+    }
+    #business .business-details {
+        height: 100%;
+        padding: 1rem;
+        grid-gap: 16px;
+    }
+    #business .business-name {
+        font-size: 1.4rem;
+    }
+    #business .business-description {
+        font-size: 0.8rem;
     }
 }
