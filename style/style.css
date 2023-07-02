@@ -958,6 +958,10 @@
     color: #333;
 }
 
+#footer .m-f-subpages {
+    display: none;
+}
+
 #footer .footer-subpages {
     position: relative;
     width: auto; height: auto;
@@ -1310,5 +1314,134 @@
     }
     #business .business-description {
         font-size: 0.8rem;
+    }
+
+    /* 새소식 섹션 **/
+    #news .news-thumb {
+        padding-bottom: 100%;
+    }
+    #news .news-item a {
+        padding-bottom: 1rem;
+    }
+    #news .news-title-area {
+        padding: 0 1rem;
+    }
+    #news .news-title {
+        font-size: 1rem;
+    }
+
+    /* 채용안내 섹션 **/
+    #recruit .recruit-types > * {
+        font-size: 0.6rem;
+    }
+    #recruit .recruit-title {
+        font-size: 1rem;
+    }
+
+    /* 고객센터 섹션 **/
+    #custom .custom-contents {
+        display: flex;
+        flex-flow: column;
+    }
+    #custom .custom-social {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    #custom .social-item {
+        height: 100px;
+    }
+    #custom .social-item:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    #custom .social-item .social-icon {
+        background-size: 60%;
+    }
+
+    /* 푸터 섹션 **/
+    #footer .footer-subpages {
+        display: none;
+    }
+    #footer .m-f-subpages {
+        position: relative;
+        display: block;
+        width: 100%; height: auto;
+    }
+    #footer .m-f-subpages-btn {
+        position: relative;
+        width: 100%; height: auto;
+    }
+    #footer .m-f-open {
+        position: relative;
+        width: 100%; height: auto;
+        padding: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #fff;
+        background: #3195ff;
+        z-index: 10;
+    }
+    #footer .m-f-open.hidden {
+        display: none;
+    }
+    #footer .m-f-close {
+        position: relative;
+        width: 100%; height: auto;
+        padding: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #fff;
+        background: #3195ff;
+        z-index: 1;
+    }
+    #footer .m-f-close.hidden {
+        display: none;
+    }
+    #footer .m-f-wrap {
+        position: relative;
+        width: 100%; height: auto;
+        display: flex;
+        flex-direction: column;
+        background: #fafafa;
+        max-height: 0px;
+        overflow: hidden;
+        transition: 0.2s all ease-in-out;
+    }
+    #footer .m-f-wrap.open {
+        max-height: 825px;
+    }
+    #footer .m-f-depth1 {
+        position: relative;
+        width: 100%; height: auto;
+        display: flex; flex-direction: column;
+    }
+    #footer .m-f-sub-title {
+        position: relative;
+        width: 100%; height: auto;
+        padding: 16px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #3195ff;
+    }
+    #footer .m-f-sub-page {
+        position: relative;
+        width: 100%; height: auto;
+    }
+    #footer .m-f-sub-page>a {
+        position: relative;
+        display: block;
+        width: 100%; height: auto;
+        padding: 1rem 3rem;
+        font-size: 0.8rem;
+        font-weight: 300;
+        color: #3195ff;
     }
 }

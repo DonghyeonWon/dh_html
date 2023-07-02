@@ -68,4 +68,20 @@ $(document).ready(function(){
         $(this).siblings().removeClass('active');
         $(this).toggleClass('active');
     });
+
+    //푸터 서브메뉴 여닫기
+    var fMenuOpen =$('.m-f-open'); //푸터 서브메뉴 열기 버튼
+    var fMenuClose = $('.m-f-close'); //푸터 서브메뉴 닫기 버튼
+    var fMenu = $('.m-f-wrap'); //푸터 서브메뉴
+
+    fMenuOpen.click(function(){
+        fMenuOpen.addClass('hidden'); //서브메뉴 열기 버튼에게는 숨기기 클래스 추가
+        fMenuClose.removeClass('hidden'); //서브메뉴 닫기 버튼에게는 숨기기 클래스 삭제
+        fMenu.addClass('open'); //서브메뉴에게는 열기 클래스 추가
+    });
+    fMenuClose.click(function(){
+        fMenuClose.addClass('hidden'); //서브메뉴 닫기 버튼에게는 숨기기 클래스 추가
+        fMenuOpen.removeClass('hidden'); //서브메뉴 열기 버튼에게는 숨기기 클래스 삭제
+        fMenu.removeClass('open'); //서브메뉴에게는 열기 클래스 삭제
+    });
 });
