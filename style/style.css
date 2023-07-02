@@ -62,8 +62,10 @@
     background: #3195ff;
     transition: all ease-in-out 0.2s;
 }
-#header .h-menu-btn:hover::after {
-    height: 3px;
+@media (hover: hover) and (pointer : fine) {
+    #header .h-menu-btn:hover::after {
+        height: 3px;
+    }
 }
 #header .h-menu-btn>a {
     position: relative;
@@ -96,8 +98,10 @@
     font-weight: 400;
     transition: all ease-in-out 0.2s;
 }
-#header .h-d2-item a:hover {
-    color: #3195ff;
+@media (hover: hover) and (pointer: fine) {
+    #header .h-d2-item a:hover {
+        color: #3195ff;
+    }
 }
 #header #h-submenu {
     position: relative;
@@ -265,9 +269,11 @@
     box-sizing: border-box;
     transition: 0.2s all ease-in-out;
 }
-#banner .goNow:hover {
-    background: #3195ff;
-    border: 1px solid #3195ff;
+@media (hover: hover) and (pointer: fine) {
+    #banner .goNow:hover {
+        background: #3195ff;
+        border: 1px solid #3195ff;
+    }
 }
 
 /* 사업영역 스타일 */
@@ -337,8 +343,10 @@
     opacity: 0;
     transition: all ease-in-out 0.2s;
 }
-#business .business-item:hover a::after {
-    opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+    #business .business-item:hover a::after {
+        opacity: 1;
+    }
 }
 #business .business-thumb {
     position: relative;
@@ -472,8 +480,10 @@
     transform: translate(-50%, -50%) scale(100%);
     transition: all ease-in-out 0.2s;
 }
-#news .news-item a:hover img {
-    transform: translate(-50%, -50%) scale(110%);
+@media (hover: hover) and (pointer: fine) {
+    #news .news-item a:hover img {
+        transform: translate(-50%, -50%) scale(110%);
+    }
 }
 #news .news-title-area {
     position: relative;
@@ -495,8 +505,10 @@
     -webkit-box-orient: vertical;
     color: #333;
 }
-#news .news-item a:hover .news-title {
-    color: #3195ff;
+@media (hover: hover) and (pointer: fine) {
+    #news .news-item a:hover .news-title {
+        color: #3195ff;
+    }
 }
 #news .news-description {
     position: relative;
@@ -509,8 +521,10 @@
     -webkit-box-orient: vertical;
     color: #999;
 }
-#news .news-item a:hover .news-description {
-    color: #3195ff;
+@media (hover: hover) and (pointer: fine) {
+    #news .news-item a:hover .news-description {
+        color: #3195ff;
+    }
 }
 #news .news-date {
     position: relative;
@@ -518,8 +532,10 @@
     font-size: 1rem;
     color: #333;
 }
-#news .news-item a:hover .news-date {
-    color: #3195ff;
+@media (hover: hover) and (pointer: fine) {
+    #news .news-item a:hover .news-date {
+        color: #3195ff;
+    }
 }
 #news .section-more {
     position: relative;
@@ -630,8 +646,10 @@
     transition: all ease-in-out 0.2s;
     overflow: hidden;
 }
-#recruit .recruit-item a:hover .recruit-thumbnail {
-    background-size: auto 110%;
+@media (hover: hover) and (pointer: fine) {
+    #recruit .recruit-item a:hover .recruit-thumbnail {
+        background-size: auto 110%;
+    }
 }
 #recruit .recruit-item:nth-child(1) .recruit-thumbnail {
     background-image: url(../source/img/main/recruit01.jpg);
@@ -687,8 +705,10 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-#recruit .recruit-item a:hover .recruit-title {
-    color: #3195ff;
+@media (hover: hover) and (pointer: fine) {
+    #recruit .recruit-item a:hover .recruit-title {
+        color: #3195ff;
+    }
 }
 #recruit .recruit-limit {
     position: relative;
@@ -696,8 +716,10 @@
     line-height: 1.4;
     color: #999;
 }
-#recruit .recruit-item a:hover .recruit-limit {
-    color: #3195ff;
+@media (hover: hover) and (pointer: fine) {
+    #recruit .recruit-item a:hover .recruit-limit {
+        color: #3195ff;
+    }
 }
 #recruit .recruit-limit br {
     display: none;
@@ -708,8 +730,10 @@
     color: #333;
     font-weight: 400;
 }
-#recruit .recruit-item a:hover .recruit-count {
-    color: #3195ff;
+@media (hover: hover) and (pointer: fine) {
+    #recruit .recruit-item a:hover .recruit-count {
+        color: #3195ff;
+    }
 }
 #recruit .section-more {
     position: relative;
@@ -843,9 +867,11 @@
     transition: 0.2s all ease-in-out;
     z-index: 50;
 }
-#custom .go-cs:hover {
-    border: 1px solid #3195ff;
-    background: #3195ff;
+@media (hover: hover) and (pointer: fine) {
+    #custom .go-cs:hover {
+        border: 1px solid #3195ff;
+        background: #3195ff;
+    }
 }
 #custom .custom-social {
     position: relative;
@@ -869,9 +895,11 @@
     box-shadow: rgba(0,0,0,0);
     transition: ease-in-out 0.2s all;
 }
-#custom .social-item:hover {
-    transform: translateY(-10px);
-    box-shadow: rgba(50, 50, 93, 0.15) 0px 3px 6px -2px, rgba(0, 0, 0, 0.2) 0px 3px 6px -3px;
+@media (hover: hover) and (pointer: fine) {
+    #custom .social-item:hover {
+        transform: translateY(-10px);
+        box-shadow: rgba(50, 50, 93, 0.15) 0px 3px 6px -2px, rgba(0, 0, 0, 0.2) 0px 3px 6px -3px;
+    }
 }
 #custom .social-item .social-icon {
     position: relative;
@@ -945,8 +973,10 @@
 #footer .footer-topMenu a {
     color: #666;
 }
-#footer .footer-topMenu a:hover {
-    color: #3195ff;
+@media (hover: hover) and (pointer: fine) {
+    #footer .footer-topMenu a:hover {
+        color: #3195ff;
+    }
 }
 #footer .footer-topMenu li:not(:last-child)::after {
     content: '|';
@@ -987,8 +1017,10 @@
     font-size: 1rem;
     color: #666;
 }
-#footer .footer-depth a:hover {
-    color: #3195ff;
+@media (hover: hover) and (pointer: fine) {
+    #footer .footer-depth a:hover {
+        color: #3195ff;
+    }
 }
 #footer .f-horizontal {
     position: relative;
@@ -1294,6 +1326,8 @@
     }
     #banner .slide-contents .goNow {
         font-size: 0.8rem;
+        background: #3195ff;
+        border: 1px solid #3195ff;
     }
     .mainBanner .slick-arrow {
         display: none !important;
@@ -1443,5 +1477,135 @@
         font-size: 0.8rem;
         font-weight: 300;
         color: #3195ff;
+    }
+}
+
+/* 해상도 601 ~ 768px에 대응하는 css */
+@media (max-width: 768px) {
+    /* 배너섹션 **/
+    #banner {
+        padding-bottom: 80%;
+    }
+    #banner .slide-contents .slide-title {
+        font-size: 2.5rem;
+    }
+
+    /* 사업영역 섹션 **/
+    #business {
+        padding: 100px 0;
+    }
+    #business .business-container {
+        padding: 0 1rem;
+    }
+    #business .section-title-area .section-title {
+        font-size: 3rem;
+    }
+    #business .section-title-area .section-description {
+        font-size: 1.2rem;
+    }
+    #business .business-container {
+        grid-gap: 32px;
+    }
+    #business .business-contents {
+        grid-gap: 1rem;
+    }
+    #business .business-thumb {
+        padding-bottom: 100%;
+    }
+
+    /* 새소식 섹션 **/
+    #news {
+        padding: 100px 0;
+    }
+    #news .news-container {
+        padding: 0 1rem;
+        grid-gap: 2rem;
+    }
+    #news .section-title {
+        font-size: 3rem;
+    }
+    #news .section-description {
+        font-size: 1.2rem;
+    }
+    #news .news-contents {
+        grid-gap: 1rem;
+    }
+
+    /* 채용안내 섹션 **/
+    #recruit {
+        padding: 100px 0;
+    }
+    #recruit .recruit-container {
+        padding: 0 1rem;
+        grid-gap: 2rem;
+    }
+    #recruit .section-title {
+        font-size: 3rem;
+    }
+    #recruit .section-description {
+        font-size: 1.2rem;
+    }
+    #recruit .recruit-contents {
+        grid-gap: 1rem;
+    }
+    #recruit .recruit-item a {
+        grid-gap: 0.8rem;
+    }
+    #recruit .recruit-item:nth-child(1) {
+        grid-column: 1/5;
+    }
+    #recruit .recruit-item:nth-child(2) {
+        grid-column: 5/9;
+    }
+    #recruit .recruit-item:nth-child(3) {
+        grid-column: 9/13;
+    }
+    #recruit .recruit-item:nth-child(4) {
+        display: none;
+    }
+
+    /* 고객센터 섹션 **/
+    #custom {
+        padding: 100px 0;
+    }
+    #custom .custom-container {
+        padding: 0 1rem;
+    }
+    #custom .custom-contents {
+        grid-gap: 1rem;
+    }
+    #custom .custom-social {
+        grid-gap: 1rem;
+    }
+    #custom .social-item {
+        height: 80px;
+        padding: 1rem;
+    }
+    #custom .social-item .social-name {
+        font-size: 1rem;
+    }
+
+    /* 푸터 섹션 **/
+    #footer {
+        padding: 100px 0;
+    }
+    #footer .footer-container {
+        padding: 0 1rem;
+        grid-gap: 2rem;
+    }
+    #footer .footer-top {
+        flex-flow: column;
+        grid-gap: 2rem;
+    }
+    #footer .f-vertical {
+        display: none;
+    }
+    #footer .f-infoLine {
+        flex-flow: column;
+        align-items: center;
+        grid-gap: 0.8rem;
+    }
+    #footer .f-infoLine li:not(:last-child)::after {
+        display: none;
     }
 }
