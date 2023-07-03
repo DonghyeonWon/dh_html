@@ -2,16 +2,24 @@
 //
 //************************************************************************************
 
+//변수 지정
+var busiThumbWidth = $('.business-thumb').innerWidth(); //사업영역 썸네일 오브젝트의 너비 받아옴
+var recruitThumbWidth = $('.recruit-thumbnail').innerWidth(); //채용영역 썸네일 오브젝트의 너피 받아옴
+var socialIconHeight = $('.social-icon').innerHeight(); //소셜영역 소셜아이콘 높이 받아옴
+//var socialItemWidth = $('#custom .social-item').innerWidth(); //소셜영역 소셜아이템 너비
+//var socialItemHeight = $('#custom .social-item').innerHeight(); //소셜영역 소셜아이템 높이
+var socialItem = $('#custom .social-item');
+var beforeScrollTop = 0; //이전 스크롤값 저장
+
 $(document).ready(function(){
-    //사업영역 썸네일 오브젝트의 너비 받아옴
-    var busiThumbWidth = $('.business-thumb').innerWidth();
-    //채용영역 썸네일 오브젝트의 너피 받아옴
-    var recruitThumbWidth = $('.recruit-thumbnail').innerWidth();
-    //소셜영역 소셜아이콘 높이 받아옴
-    var socialIconHeight = $('.social-icon').innerHeight();
-    
-    //이전 스크롤값 저장
-    var beforeScrollTop = 0;
+    //처음 시작할때 웹페이지 너비가 600이하일 때 실행하는
+    if($(window).innerWidth() <= 600) {
+        socialSizeSync();
+    }
+    if($(window).innerWidth() > 600) {
+        $('.social-icon').innerWidth(socialIconHeight);
+    }
+
     //스크롤 이벤트
     $(window).scroll(function(){
         //스크롤이 발생할때 마다 현재 스크롤값을 변수에 저장
@@ -50,8 +58,6 @@ $(document).ready(function(){
     //채용영역 썸네일 오브젝트의 높이값을 너비값의 1.2배로 지정
     //$('.recruit-thumbnail').innerHeight(recruitThumbWidth * 1.2);
 
-    //소셜영역 소셜아이콘 너비값을 높이값과 동일하게 설정
-    $('.social-icon').innerWidth(socialIconHeight);
     //console.log(busiThumbWidth);
 
     //모바일 ~ 태블릿 관련 기능
@@ -85,3 +91,18 @@ $(document).ready(function(){
         fMenu.removeClass('open'); //서브메뉴에게는 열기 클래스 삭제
     });
 });
+
+$(window).resize(() => {
+    if($(window).innerWidth() <= 600){ //화면 해상도가 600이하일때
+        socialSizeSync(); //소셜 아이템 크기 동기화 메서드
+    }
+    //소셜영역 소셜아이콘 너비값을 높이값과 동일하게 설정 [화면 해상도가 600px 초과일 때]
+    if($(window).innerWidth() > 600) {
+        $('.social-icon').innerWidth(socialIconHeight);
+    }
+});
+
+//소셜 아이템 크기 동기화 메서드
+function socialSizeSync(){
+    socialItem.innerHeight(socialItem.innerWidth());
+}

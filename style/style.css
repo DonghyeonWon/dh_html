@@ -1196,7 +1196,7 @@
     }
 }
 
-/* 769 ~ 1200px 해상도 반응형 **/
+/* 769 ~ 1024px 해상도 반응형 **/
 @media (max-width: 1024px) {
     /* 모바일 태블릿 GNB **/
     #m-gnb.active {
@@ -1377,6 +1377,16 @@
         display: flex;
         flex-flow: column;
     }
+    #custom .section-title-area::after {
+        width: 280px;
+    }
+    #custom .section-title {
+        font-weight: 500;
+    }
+    #custom .go-cs {
+        border: 1px solid #3195ff;
+        background: #3195ff;
+    }
     #custom .custom-social {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -1450,7 +1460,7 @@
         transition: 0.2s all ease-in-out;
     }
     #footer .m-f-wrap.open {
-        max-height: 825px;
+        max-height: 885px;
     }
     #footer .m-f-depth1 {
         position: relative;
@@ -1460,7 +1470,7 @@
     #footer .m-f-sub-title {
         position: relative;
         width: 100%; height: auto;
-        padding: 16px;
+        padding: 1.2rem 1rem;
         font-size: 1rem;
         font-weight: 500;
         color: #3195ff;
@@ -1473,21 +1483,50 @@
         position: relative;
         display: block;
         width: 100%; height: auto;
-        padding: 1rem 3rem;
+        padding: 1.2rem 3rem;
         font-size: 0.8rem;
-        font-weight: 300;
+        font-weight: 400;
         color: #3195ff;
     }
 }
 
 /* 해상도 601 ~ 768px에 대응하는 css */
 @media (max-width: 768px) {
+    /* 헤더 섹션 **/
+    #header {
+        height: 70px;
+    }
+    #header .header-container {
+        padding: 0 1rem;
+    }
+    #header .h-submenu-btn {
+        width: 24px;
+        height: 24px;
+    }
+
     /* 배너섹션 **/
     #banner {
         padding-bottom: 80%;
+        margin-top: 70px;
+    }
+    #banner .mainBanner .slide-wrapper {
+        padding: 0 1rem;
+        grid-gap: 1rem;
     }
     #banner .slide-contents .slide-title {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
+    }
+    #banner .slide-contents .slide-description {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    .mainBanner .slick-dots {
+        bottom: 1rem;
+        grid-gap: 0.8rem;
+    }
+    .mainBanner .slick-dots li {
+        width: 0.8rem;
+        height: 0.8rem;
     }
 
     /* 사업영역 섹션 **/
@@ -1571,6 +1610,12 @@
     #custom .custom-container {
         padding: 0 1rem;
     }
+    #custom .section-title {
+        font-size: 3rem;
+    }
+    #custom .section-description {
+        font-size: 1.2rem;
+    }
     #custom .custom-contents {
         grid-gap: 1rem;
     }
@@ -1607,5 +1652,247 @@
     }
     #footer .f-infoLine li:not(:last-child)::after {
         display: none;
+    }
+}
+
+/* 해상도 480 ~ 600px 대응 반응형 스타일 **/
+@media (max-width: 600px) {
+    /* 배너 섹션 **/
+    #banner {
+        padding-bottom: 120%;
+    }
+    #banner .slide-contents .slide-title {
+        font-size: 2rem;
+    }
+    #banner .slide-contents .goNow {
+        padding: 0.8rem 1rem;
+    }
+
+    /* 사업영역 섹션 **/
+    #business .section-title-area::after {
+        width: 280px;
+    }
+    #business .section-title-area .section-title {
+        font-weight: 500;
+    }
+    #business .business-thumb {
+        padding-bottom: 120%;
+    }
+
+    /* 새소식 섹션 **/
+    #news .section-title-area::after {
+        width: 280px;
+    }
+    #news .section-title {
+        font-weight: 500;
+    }
+    #news .news-contents {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+    }
+
+    #news .news-item:nth-child(1) {grid-column: auto;}
+    #news .news-item:nth-child(2) {grid-column: auto;}
+    #news .news-item:nth-child(3) {grid-column: auto;}
+
+    #news .news-thumb {
+        padding-bottom: 60%;
+    }
+    #news .news-thumb img {
+        width: 115%; height: auto;
+    }
+
+    /* 채용안내 섹션 **/
+    #recruit .section-title-area::after {
+        width: 280px;
+    }
+    #recruit .section-title {
+        font-weight: 500;
+    }
+    #recruit .recruit-item:nth-child(3) {
+        display: none;
+    }
+    #recruit .recruit-item:nth-child(1) {
+        grid-column: 1/7;
+    }
+    #recruit .recruit-item:nth-child(2) {
+        grid-column: 7/13;
+    }
+
+    /* 고객센터 섹션 **/
+    #custom .cs-title {
+        font-size: 2rem;
+    }
+    #custom .cs-description {
+        font-size: 1rem;
+    }
+    #custom .go-cs {
+        padding: 0.8rem 1rem;
+        font-size: 0.8rem;
+    }
+    #custom .custom-social {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+    #custom .social-item {
+        height: auto;
+    }
+    #custom .social-item .social-icon {
+        width: 100%;
+        background-size: 50%;
+    }
+    #custom .social-item .social-name {
+        display: none;
+    }
+}
+
+/* 해상도 321 ~ 480px에 대응하는 스타일 **/
+@media (max-width: 480px) {
+    /* 모바일 헤더 섹션 **/
+    #m-gnb {
+        width: 100%;
+    }
+
+    /* 헤더 섹션 **/
+    #header {
+        height: 60px;
+    }
+
+    /* 배너 섹션 **/
+    #banner  {
+        margin-top: 60px;
+        padding-bottom: 140%;
+    }
+    #banner .mainBanner .slide-contents {
+        grid-column: 1/13;
+    }
+    #banner .slide-contents .slide-title {
+        font-size: 1.4rem;
+    }
+    #banner .slide-contents .slide-description {
+        font-size: 0.8rem;
+    }
+
+    /* 사업영역 섹션 **/
+    #business .business-container {
+        grid-gap: 1rem;
+    }
+    #business .section-title-area {
+        padding-bottom: 1rem;
+        grid-gap: 1rem;
+    }
+    #business .section-title-area::after {
+        width: 250px;
+    }
+    #business .section-title-area .section-title {
+        font-size: 2.5rem;
+    }
+    #business .section-title-area .section-description {
+        font-size: 1rem;
+    }
+    #business .business-contents {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+    #business .business-thumb {
+        padding-bottom: 100%;
+    }
+
+    /* 새소식 섹션 **/
+    #news .news-container {
+        grid-gap: 1rem;
+    }
+    #news .section-title-area {
+        padding-bottom: 1rem;
+        grid-gap: 1rem;
+    }
+    #news .section-title-area::after {
+        width: 250px;
+    }
+    #news .section-title {
+        font-size: 2.5rem;
+    }
+    #news .section-description {
+        font-size: 1rem;
+    }
+
+    /* 인재채용 섹션 **/
+    #recruit .recruit-container {
+        grid-gap: 1rem;
+    }
+    #recruit .section-title-area {
+        padding-bottom: 1rem;
+        grid-gap: 1rem;
+    }
+    #recruit .section-title-area::after {
+        width: 250px;
+    }
+    #recruit .section-title {
+        font-size: 2.5rem;
+    }
+    #recruit .section-description {
+        font-size: 1rem;
+    }
+
+    /* cs 섹션 **/
+    #custom .custom-container {
+        grid-gap: 1rem;
+    }
+    #custom .section-title-area {
+        padding-bottom: 1rem;
+        grid-gap: 1rem;
+    }
+    #custom .section-title-area::after {
+        width: 250px;
+    }
+    #custom .section-title {
+        font-size: 2.5rem;
+    }
+    #custom .section-description {
+        font-size: 1rem;
+    }
+    #custom .custom-cs {
+        padding-bottom: 80%;
+    }
+    #custom .custom-cs-background {
+        width: auto; height: 100%;
+    }
+    #custom .custom-cs-details {
+        height: 100%;
+        padding: 1rem;
+        justify-content: flex-end;
+    }
+    #custom .cs-title {
+        font-size: 1.2rem;
+    }
+    #custom .cs-description {
+        font-size: 0.8rem;
+    }
+    #custom .social-item .social-icon {
+        background-size: 100%;
+    }
+
+    /* 푸터 섹션 **/
+    #footer .footer-container {
+        grid-gap: 1.5rem;
+    }
+    #footer .footer-top {
+        grid-gap: 1.5rem;
+    }
+    #footer #footer-logo img {
+        height: 35px;
+    }
+    #footer .footer-topMenu a {
+        font-size: 0.8rem;
+    }
+    #footer .footer-topMenu {
+        width: 100%;
+        justify-content: space-between;
+    }
+    #footer .footer-topMenu li:not(:last-child)::after {
+        display: none;
+    }
+    #footer .f-infoLine li {
+        font-size: 0.5rem;
     }
 }
