@@ -1869,7 +1869,7 @@
         font-size: 0.8rem;
     }
     #custom .social-item .social-icon {
-        background-size: 100%;
+        background-size: 80%;
     }
 
     /* 푸터 섹션 **/
@@ -1894,5 +1894,86 @@
     }
     #footer .f-infoLine li {
         font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 320px) {
+    /* 헤더 섹션 **/
+    #header .header-container {
+        padding: 0 0.8rem
+    }
+    #header #h-submenu {
+        grid-gap: 1.2em;
+    }
+
+    /* 배너 섹션 **/
+    #banner .mainBanner .slide-wrapper {
+        padding: 0 0.8rem;
+    }
+    #banner .mainBanner .slide-contents {
+        grid-gap: 1.4rem;
+    }
+
+    /* 사업영역 섹션 **/
+    #business {
+        padding: 80px 0;
+    }
+    #business .business-container {
+        padding: 0 0.8rem;
+    }
+    #business .business-contents {
+        grid-gap: 0.8rem;
+    }
+
+    /* 새소식 섹션 **/
+    #news {
+        padding: 80px 0;
+    }
+    #news .news-container {
+        padding: 0 0.8rem;
+    }
+    #news .news-contents {
+        grid-gap: 0.8rem;
+    }
+    #news .news-item a {
+        padding-bottom: 0.8rem;
+        grid-gap: 0.8rem;
+    }
+
+    /* 인재채용 섹션 **/
+    #recruit {
+        padding: 80px 0;
+    }
+    #recruit .recruit-container {
+        padding: 0 0.8rem;
+    }
+    #recruit .recruit-item:nth-child(1) {
+        grid-column: 1/13;
+    }
+    #recruit .recruit-item:nth-child(2) {
+        display: none;
+    }
+
+    /* cs 섹션 **/
+    #custom {
+        padding: 80px 0;
+    }
+    #custom .custom-container {
+        padding: 0 0.8rem;
+        grid-gap: 0.8rem;
+    }
+    #custom .custom-contents {
+        grid-gap: 0.8rem;
+    }
+    #custom .custom-social {
+        grid-gap: 0.8rem;
+    }
+
+    /* 푸터 섹션 **/
+    #footer {
+        padding: 80px 0;
+    }
+    #footer .footer-container {
+        padding: 0 0.8rem;
     }
 }
