@@ -1,9 +1,42 @@
 :root {
-    --primary-color : #3195ff;
-    --sub-color : #51E739;
-    --main-text : #333;
-    --sub-text-1 : #999;
-    --sub-text-2 : #f0f0f0;
+    /* 기본 변수 **/
+    --primary-color: #3195ff; /* 주요색 */
+    --sub-color: #51E739; /* 보조색 */
+    --main-text: #333; /* 주요 텍스트 색 */
+    --sub-text-1: #999; /* 보조 텍스트 색 */
+    --sub-text-2: #f0f0f0; /* 백색 보조 텍스트 색 */
+    --text-shadow: #333 0px 2px 4px; /* 텍스트 그림자 */
+    --dark-overlayer: rgba(0,0,0,0.4); /* 이미지 위 레이어드 영역의 배경색 */
+    --line-height-common: 1.4;
+
+    /* 그리드 시스템 **/
+    --grid-padding-normal: 0 24px;
+    --grid-padding-768: 0 1rem;
+    --grid-padding-320: 0 0.8rem;
+    --gap-normal: 24px;
+    --gap-768: 1rem;
+    --gap-320: 0.8rem;
+
+    /* 섹션 타이틀 영역 폰트 **/
+    --section-title-normal: 4rem;
+    --section-title-1200: 3.5rem;
+    --section-title-768: 3rem;
+    --section-title-320: 2.5rem;
+    --section-title-weight-1: bold;
+    --section-title-weight-2: 500;
+
+    --section-desc-normal: 1.4rem;
+    --section-desc-768: 1.2rem;
+    --section-desc-480: 1rem;
+
+    /* 컨텐츠 타이틀 영역 폰트 **/
+    --contents-title-normal: 1.4rem;
+    --contents-title-1200: 1.2rem;
+    --contents-title-1024: 1rem;
+    --contents-title-weight: 400;
+
+    --contents-desc-normal: 1rem;
+    --contents-desc-1200: 0.8rem;
 }
 
 #m-gnb {
