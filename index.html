@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="source/favicon/favicon.svg">
+    <link rel="stylesheet" href="style/font.css">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/sub.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <title>미래건설</title>
+</head>
+
+<body>
+    <!-- 모바일 ~ 태블릿 GNB -->
+    <div id="m-gnb">
+        <div class="m-gnb-container">
+            <div class="m-gnb-close"><img src="source/img/icons/close.svg" alt="닫기 아이콘"></div>
+            <ul class="m-gnb-d1">
+                <li class="m-d1-item">
+                    <p class="m-gnb-category">기업소개<img src="source/img/icons/banner_next.png" alt="배너의 다음버튼 아이콘"></p>
+                    <ul class="m-gnb-d2">
+                        <li class="m-d2-item"><a href="#">인사말</a></li>
+                        <li class="m-d2-item"><a href="#">비전</a></li>
+                        <li class="m-d2-item"><a href="#">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li class="m-d1-item">
+                    <p class="m-gnb-category">사업영역<img src="source/img/icons/banner_next.png" alt="배너의 다음버튼 아이콘"></p>
+                    <ul class="m-gnb-d2">
+                        <li class="m-d2-item"><a href="#">건축사업</a></li>
+                        <li class="m-d2-item"><a href="#">주택사업</a></li>
+                        <li class="m-d2-item"><a href="#">토목사업</a></li>
+                        <li class="m-d2-item"><a href="#">조경사업</a></li>
+                    </ul>
+                </li>
+                <li class="m-d1-item">
+                    <p class="m-gnb-category">인재채용<img src="source/img/icons/banner_next.png" alt="배너의 다음버튼 아이콘"></p>
+                    <ul class="m-gnb-d2">
+                        <li class="m-d2-item"><a href="#">인재상</a></li>
+                        <li class="m-d2-item"><a href="#">인사제도</a></li>
+                        <li class="m-d2-item"><a href="#">채용정보</a></li>
+                    </ul>
+                </li>
+                <li class="m-d1-item">
+                    <p class="m-gnb-category">고객센터<img src="source/img/icons/banner_next.png" alt="배너의 다음버튼 아이콘"></p>
+                    <ul class="m-gnb-d2">
+                        <li class="m-d2-item"><a href="#">새소식</a></li>
+                        <li class="m-d2-item"><a href="#">소셜</a></li>
+                        <li class="m-d2-item"><a href="#">문의사항</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 헤더 gnb 영역 -->
+    <header id="header">
+        <div class="header-container">
+            <a href="index.html" id="h-logo">
+                <img src="source/img/logo/mr_architecture_logo.png" alt="미래건설 로고">
+            </a>
+            <ul id="h-menu">
+                <li class="h-menu-btn">
+                    <a href="#">기업소개</a>
+                    <ul class="h-depth-2">
+                        <li class="h-d2-item"><a href="#">인사말</a></li>
+                        <li class="h-d2-item"><a href="#">비전</a></li>
+                        <li class="h-d2-item"><a href="#">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li class="h-menu-btn">
+                    <a href="#">사업영역</a>
+                    <ul class="h-depth-2">
+                        <li class="h-d2-item"><a href="#">건축사업</a></li>
+                        <li class="h-d2-item"><a href="#">주택사업</a></li>
+                        <li class="h-d2-item"><a href="#">토목사업</a></li>
+                        <li class="h-d2-item"><a href="#">조경사업</a></li>
+                    </ul>
+                </li>
+                <li class="h-menu-btn">
+                    <a href="#">인재채용</a>
+                    <ul class="h-depth-2">
+                        <li class="h-d2-item"><a href="#">인재상</a></li>
+                        <li class="h-d2-item"><a href="#">인사제도</a></li>
+                        <li class="h-d2-item"><a href="#">채용정보</a></li>
+                    </ul>
+                </li>
+                <li class="h-menu-btn">
+                    <a href="#">고객센터</a>
+                    <ul class="h-depth-2">
+                        <li class="h-d2-item"><a href="#">새소식</a></li>
+                        <li class="h-d2-item"><a href="#">소셜</a></li>
+                        <li class="h-d2-item"><a href="#">문의사항</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="h-submenu">
+                <li class="h-submenu-btn h-search"><img src="source/img/icons/search.png" alt="검색아이콘"></li>
+                <li class="h-submenu-btn h-menu"><img src="source/img/icons/menu.png" alt="메뉴아이콘"></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 메인배너 영역 -->
+    <div id="banner">
+        <!-- 실 슬라이드 영역 -->
+        <div class="mainBanner">
+            <!-- 각 하나의 슬라이드 영역 -->
+            <div class="slide-wrapper">
+                <div class="slide-contents">
+                    <h3 class="slide-title">미래를 건설하는 기업</h3>
+                    <p class="slide-description">
+                        지금까지 쌓아온 기술과 신뢰로<br>
+                        미래를 건설합니다.
+                    </p>
+                    <a href="#" class="goNow">
+                        자세히 보기
+                    </a>
+                </div>
+            </div>
+            <!-- 각 하나의 슬라이드 영역 -->
+            <div class="slide-wrapper">
+                <div class="slide-contents">
+                    <h3 class="slide-title">실력으로 입증하는 기업</h3>
+                    <p class="slide-description">
+                        미래건설은 건축,주택,토목,조경 4분야에서
+                        <br>뛰어난 실적을 보이고 있습니다.
+                    </p>
+                    <a href="#" class="goNow">
+                        자세히 보기
+                    </a>
+                </div>
+            </div>
+            <!-- 각 하나의 슬라이드 영역 -->
+            <div class="slide-wrapper">
+                <div class="slide-contents">
+                    <h3 class="slide-title">새로운 피를 수혈하는 기업</h3>
+                    <p class="slide-description">
+                        매년 새로운 인재를 영입하여
+                        <br>회사의 발전을 도모합니다.
+                    </p>
+                    <a href="#" class="goNow">
+                        자세히 보기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 사업영역 영역 -->
+    <div id="business">
+        <div class="business-container">
+            <div class="section-title-area">
+                <h3 class="section-title">사업영역</h3>
+                <p class="section-description">도전과 창조에는 끝이 없습니다.</p>
+            </div>
+            <ul class="business-contents">
+                <li class="business-item">
+                    <a href="#">
+                        <div class="business-thumb thumb01"></div>
+                        <div class="business-details">
+                            <h6 class="business-name">건축사업</h6>
+                            <p class="business-description">건축은 단순히 짓는다는 개념을 넘어서 우리의 삶을 복합적으로 표현하는 것입니다.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="business-item">
+                    <a href="#">
+                        <div class="business-thumb thumb02"></div>
+                        <div class="business-details">
+                            <h6 class="business-name">주택사업</h6>
+                            <p class="business-description">집은 우리가 그저 잠을 자고, 밥을 먹는 곳이 아닙니다. 우리의 일생을 꾸려가는 중요한 곳입니다.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="business-item">
+                    <a href="#">
+                        <div class="business-thumb thumb03"></div>
+                        <div class="business-details">
+                            <h6 class="business-name">토목사업</h6>
+                            <p class="business-description">토목은 도로, 댐, 터널, 교량등과 같이 기술을 통해 자연환경의 한계를 극복해내는 것입니다.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="business-item">
+                    <a href="#">
+                        <div class="business-thumb thumb04"></div>
+                        <div class="business-details">
+                            <h6 class="business-name">조경사업</h6>
+                            <p class="business-description">도시를 이루는 것이 콘크리트와 유리만 있는 것은 아닙니다. 도시에도 푸른 쉼터가 필요합니다.</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="news">
+        <div class="news-container">
+            <div class="section-title-area">
+                <h3 class="section-title">새소식</h3>
+                <p class="section-description">미래건설의 소식을 전합니다.</p>
+            </div>
+            <ul class="news-contents">
+                <li class="news-item">
+                    <a href="#">
+                        <div class="news-thumb">
+                            <img src="source/img/main/news01.jpg" alt="새소식01">
+                        </div>
+                        <div class="news-title-area">
+                            <h6 class="news-title">국민동 재개발사업 수주</h6>
+                            <p class="news-description">미래건설이 국민동 재개발사업 주요 사업체로 지정됐다. 이에따라 미래건설은 오는 2024년 4월 부터 본격적인 대규모 택지 사업에 뛰어들게 된다. 이로써 미래건설은 또다시 실력을 입증하게 된것이다.</p>
+                        </div>
+                        <p class="news-date">2023 - 01 - 01</p>
+                    </a>
+                </li>
+                <li class="news-item">
+                    <a href="#">
+                        <div class="news-thumb">
+                            <img src="source/img/main/news02.jpg" alt="새소식02">
+                        </div>
+                        <div class="news-title-area">
+                            <h6 class="news-title">이라크니스탄 재건사업 대상자 지정</h6>
+                            <p class="news-description">미래건설이 이라크니스탄 재건사업 대상자로 지정됐다. 이에따라 미래건설은 오는 2025년 6월 부터 본격적인 대규모 재건사업에 뛰어들게 된다. 이로써 미래건설은 글로벌 역량을 강화하게 됐다.</p>
+                        </div>
+                        <p class="news-date">2023- 02 - 06</p>
+                    </a>
+                </li>
+                <li class="news-item">
+                    <a href="#">
+                        <div class="news-thumb">
+                            <img src="source/img/main/news03.jpg" alt="새소식03">
+                        </div>
+                        <div class="news-title-area">
+                            <h6 class="news-title">어린이 날 앞두고 현재아동복지원 기부</h6>
+                            <p class="news-description">미래건설은 이번 어린이 날을 앞두고 현재아동복지원에 1억원을 기부했다. 이로써 미래건설은 사업영역에서의 능력을 넘어 더불어 살아가는 사회를 만드는데 기여를 하고있음을 알리게 됐다.</p>
+                        </div>
+                        <p class="news-date">2023 - 04 - 20</p>
+                    </a>
+                </li>
+            </ul>
+            <div class="section-more">
+                <a href="#">소식 더보기</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="recruit">
+        <div class="recruit-container">
+            <div class="section-title-area">
+                <h3 class="section-title">채용안내</h3>
+                <p class="section-description">새로운 미래를 건설할 인재를 찾습니다.</p>
+            </div>
+            <ul class="recruit-contents">
+                <li class="recruit-item">
+                    <a href="#">
+                        <div class="recruit-thumbnail">
+                            <!-- 백그라운드 이미지 사용 -->
+                            <!-- 1:1.5 비율 세로로 -->
+                        </div>
+                        <ul class="recruit-types">
+                            <li class="type">정규직</li>
+                            <li class="career">신입</li>
+                        </ul>
+                        <div class="recruit-details-wrap">
+                            <h6 class="recruit-title">23년 건축사업부 정규직 신입사원 상시 채용</h6>
+                            <p class="recruit-limit">
+                                2023-01-01 00:00<br> ~ 2023-12-31 23:59
+                            </p>
+                        </div>
+                        <p class="recruit-count">
+                            D-365
+                        </p>
+                    </a>
+                </li>
+                <li class="recruit-item">
+                    <a href="#">
+                        <div class="recruit-thumbnail">
+                            <!-- 백그라운드 이미지 사용 -->
+                            <!-- 1:1.5 비율 세로로 -->
+                        </div>
+                        <ul class="recruit-types">
+                            <li class="type">계약직</li>
+                            <li class="career">신입</li>
+                        </ul>
+                        <div class="recruit-details-wrap">
+                            <h6 class="recruit-title">23년 주택사업부 계약직 신입사원 상시 채용</h6>
+                            <p class="recruit-limit">
+                                2023-01-01 00:00<br> ~ 2023-12-31 23:59
+                            </p>
+                        </div>
+                        <p class="recruit-count">
+                            D-365
+                        </p>
+                    </a>
+                </li>
+                <li class="recruit-item">
+                    <a href="#">
+                        <div class="recruit-thumbnail">
+                            <!-- 백그라운드 이미지 사용 -->
+                            <!-- 1:1.5 비율 세로로 -->
+                        </div>
+                        <ul class="recruit-types">
+                            <li class="type">전환형</li>
+                            <li class="career">신입</li>
+                        </ul>
+                        <div class="recruit-details-wrap">
+                            <h6 class="recruit-title">23년 토목사업부 전환형 신입사원 상시 채용</h6>
+                            <p class="recruit-limit">
+                                2023-01-01 00:00<br> ~ 2023-12-31 23:59
+                            </p>
+                        </div>
+                        <p class="recruit-count">
+                            D-365
+                        </p>
+                    </a>
+                </li>
+                <li class="recruit-item">
+                    <a href="#">
+                        <div class="recruit-thumbnail">
+                            <!-- 백그라운드 이미지 사용 -->
+                            <!-- 1:1.5 비율 세로로 -->
+                        </div>
+                        <ul class="recruit-types">
+                            <li class="type">정규직</li>
+                            <li class="career">경력</li>
+                        </ul>
+                        <div class="recruit-details-wrap">
+                            <h6 class="recruit-title">23년 3월 조경사업부 정규직 경력사원 수시 채용</h6>
+                            <p class="recruit-limit">
+                                2023-03-01 00:00<br> ~ 2023-03-31 23:59
+                            </p>
+                        </div>
+                        <p class="recruit-count">
+                            D-31
+                        </p>
+                    </a>
+                </li>
+            </ul>
+            <div class="section-more">
+                <a href="#">채용 더보기</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="custom">
+        <div class="custom-container">
+            <div class="section-title-area">
+                <h3 class="section-title">CS & 소셜</h3>
+                <p class="section-description">끊임없는 소통으로 신뢰를 건설합니다.</p>
+            </div>
+            <ul class="custom-contents">
+                <li class="custom-cs">
+                    <img src="source/img/main/cs.webp" alt="상담원 이미지" class="custom-cs-background">
+                    <div class="custom-cs-details">
+                        <div class="cs-title-area">
+                            <h6 class="cs-title">무엇을 도와드릴까요?</h6>
+                            <p class="cs-description">여러분의 소중한 소리에 귀 기울이겠습니다.</p>
+                        </div>
+                        <a href="#" class="go-cs">
+                            바로가기 >
+                        </a>
+                    </div>
+                </li>
+                <li class="custom-social">
+                    <a href="#" class="social-item youtube">
+                        <div class="social-icon"></div>
+                        <span class="social-name">미래건설 유튜브</span>
+                    </a>
+                    <a href="#" class="social-item kakao">
+                        <div class="social-icon"></div>
+                        <span class="social-name">미래건설 카카오채널</span>
+                    </a>
+                    <a href="#" class="social-item instagram">
+                        <div class="social-icon"></div>
+                        <span class="social-name">미래건설 인스타그램</span>
+                    </a>
+                    <a href="#" class="social-item twitter">
+                        <div class="social-icon"></div>
+                        <span class="social-name">미래건설 트위터</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <a href="#" id="footer-logo">
+                    <img src="source/img/logo/mr_architecture_logo.png" alt="푸터로고 자리">
+                </a>
+                <div class="f-vertical"></div>
+                <ul class="footer-topMenu">
+                    <li><a href="#" id="f-toHome">홈</a></li>
+                    <li><a href="#" id="f-policy">이용약관</a></li>
+                    <li><a href="#" id="f-toUse">이용안내</a></li>
+                    <li><a href="#" id="f-personal" class="bolder">개인정보처리방침</a></li>
+                </ul>
+            </div>
+            <div class="m-f-subpages">
+                <div class="m-f-wrap">
+                    <ul class="m-f-depth1 introduce">
+                        <li class="m-f-sub-title"><p>기업소개</p></li>
+                        <li class="m-f-sub-page"><a href="#">인사말</a></li>
+                        <li class="m-f-sub-page"><a href="#">비전</a></li>
+                        <li class="m-f-sub-page"><a href="#">오시는 길</a></li>
+                    </ul>
+                    <ul class="m-f-depth1 business">
+                        <li class="m-f-sub-title"><p>사업영역</p></li>
+                        <li class="m-f-sub-page"><a href="#">건축사업</a></li>
+                        <li class="m-f-sub-page"><a href="#">주택사업</a></li>
+                        <li class="m-f-sub-page"><a href="#">토목사업</a></li>
+                        <li class="m-f-sub-page"><a href="#">조경사업</a></li>
+                    </ul>
+                    <ul class="m-f-depth1 recruit">
+                        <li class="m-f-sub-title"><p>인재채용</p></li>
+                        <li class="m-f-sub-page"><a href="#">인재상</a></li>
+                        <li class="m-f-sub-page"><a href="#">인사제도</a></li>
+                        <li class="m-f-sub-page"><a href="#">채용정보</a></li>
+                    </ul>
+                    <ul class="m-f-depth1 business">
+                        <li class="m-f-sub-title"><p>고객센터</p></li>
+                        <li class="m-f-sub-page"><a href="#">새소식</a></li>
+                        <li class="m-f-sub-page"><a href="#">소셜</a></li>
+                        <li class="m-f-sub-page"><a href="#">문의사항</a></li>
+                    </ul>
+                </div>
+                <div class="m-f-subpages-btn">
+                    <div class="m-f-open">
+                        <p>전체메뉴 열기</p>
+                    </div>
+                    <div class="m-f-close hidden">
+                        <p>전체메뉴 닫기</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-subpages">
+                <ul class="footer-depth 1">
+                    <li class="sub-title"><a href="#">기업소개</a></li>
+                    <li class="sub-normal"><a href="#">인사말</a></li>
+                    <li class="sub-normal"><a href="#">비전</a></li>
+                    <li class="sub-normal"><a href="#">오시는 길</a></li>
+                </ul>
+                <ul class="footer-depth 2">
+                    <li class="sub-title"><a href="#">사업영역</a></li>
+                    <li class="sub-normal"><a href="#">건축사업</a></li>
+                    <li class="sub-normal"><a href="#">주택사업</a></li>
+                    <li class="sub-normal"><a href="#">토목사업</a></li>
+                    <li class="sub-normal"><a href="#">조경사업</a></li>
+                </ul>
+                <!--
+                <ul class="footer-depth 3">
+                    <li class="sub-title"><a href="#">포트폴리오</a></li>
+                    <li class="sub-normal"><a href="#">건축사업</a></li>
+                    <li class="sub-normal"><a href="#">주택사업</a></li>
+                    <li class="sub-normal"><a href="#">토목사업</a></li>
+                    <li class="sub-normal"><a href="#">조경사업</a></li>
+                </ul>
+            -->
+                <ul class="footer-depth 4">
+                    <li class="sub-title"><a href="#">인재채용</a></li>
+                    <li class="sub-normal"><a href="#">인재상</a></li>
+                    <li class="sub-normal"><a href="#">인사제도</a></li>
+                    <li class="sub-normal"><a href="#">채용정보</a></li>
+                </ul>
+                <ul class="footer-depth 5">
+                    <li class="sub-title"><a href="#">고객센터</a></li>
+                    <li class="sub-normal"><a href="#">새소식</a></li>
+                    <li class="sub-normal"><a href="#">소셜</a></li>
+                    <li class="sub-normal"><a href="#">문의사항</a></li>
+                </ul>
+            </div>
+            <div class="f-horizontal"></div>
+            <div class="footer-socials">
+                <ul class="social-lists">
+                    <li class="f-socialItem youtube"><a href="#"></a></li>
+                    <li class="f-socialItem kakao"><a href="#"></a></li>
+                    <li class="f-socialItem instagram"><a href="#"></a></li>
+                    <li class="f-socialItem twitter"><a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="f-horizontal"></div>
+            <div class="footer-siteInfo">
+                <ul class="f-infoLine">
+                    <li>상호명 : (주)미래건설</li>
+                    <li>대표자 : 홍길동</li>
+                    <li>개인정보책임자 : 고길동</li>
+                </ul>
+                <ul class="f-infoLine">
+                    <li>사업자등록번호 : 000-00-00000</li>
+                    <li>통신판매업신고번호 : 제0000-대한민국-0000호</li>
+                </ul>
+                <ul class="f-infoLine">
+                    <li>연락처 : 000-000-0000,000-000-0001</li>
+                    <li>팩스 : 000-000-0000,000-000-0001</li>
+                    <li>이메일 : webuild@mirae.com</li>
+                </ul>
+                <ul class="f-infoLine">
+                    <li>주소 : 대한민국 대한특별시 민국구 독립로 815 만세빌딩 31층</li>
+                </ul>
+                <ul class="f-infoLine copyright">
+                    <li>Copyright © 2023 미래건설. All rights reserved.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.mainBanner').slick({
+                infinite: true,
+                dots: true,
+            });
+        });
+    </script>
+
+</body>
+
+</html>

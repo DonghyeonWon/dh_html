@@ -1,3 +1,11 @@
+:root {
+    --primary-color : #3195ff;
+    --sub-color : #51E739;
+    --main-text : #333;
+    --sub-text-1 : #999;
+    --sub-text-2 : #f0f0f0;
+}
+
 #m-gnb {
     position: fixed;
     top: 0; right: -100%;
