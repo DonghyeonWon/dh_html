@@ -114,34 +114,39 @@
             <div class="subpage-top">
                 <!-- 현재 페이지의 이름 -->
                 <div class="subpage-title">
-                    <h3>인사말</h3>
+                    <div class="subpage-title-wrap">
+                        <h3>인사말</h3>
+                        <h6>CEO Message</h6>
+                    </div>
                 </div>
                 <!-- 서브페이지용 미니 내비게이션 [ 홈 | 카테고리 | 페이지 ] 로 구성돼있음 -->
-                <ul class="subpage-top-nav">
-                    <!-- index로 이동하는 홈 버튼 -->
-                    <li class="subpage-nav-item">
-                        <a href="index.html"><img src="" alt="홈 아이콘"></a>
-                    </li>
-                    <!-- 카테고리 리스트 -->
-                    <li class="subpage-nav-item">
-                        <p class="current-category">기업소개</p>
-                        <ul class="subpage-all-category">
-                            <li class="all-category-item current"><a href="ceo.html">기업소개</a></li>
-                            <li class="all-category-item"><a href="architecture.html">사업영역</a></li>
-                            <li class="all-category-item"><a href="ideal.html">인재채용</a></li>
-                            <li class="all-category-item"><a href="news.html">고객센터</a></li>
-                        </ul>
-                    </li>
-                    <!-- 페이지 리스트 -->
-                    <li class="subpage-nav-item">
-                        <p class="current-page">인사말</p>
-                        <ul class="subpage-all-pages">
-                            <li class="all-pages-item current"><a href="ceo.html">인사말</a></li>
-                            <li class="all-pages-item"><a href="vision.html">비전</a></li>
-                            <li class="all-pages-item"><a href="way.html">오시는 길</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="subpage-top-nav">
+                    <ul class="subpage-nav-list">
+                        <!-- index로 이동하는 홈 버튼 -->
+                        <li class="subpage-nav-item home">
+                            <a href="index.html"><img src="source/img/icons/home_white.svg" alt="홈 아이콘"></a>
+                        </li>
+                        <!-- 카테고리 리스트 -->
+                        <li class="subpage-nav-item category">
+                            <p class="current-category">기업소개 <img class="nav-expand-triangle" src="source/img/icons/triangle_white.svg" alt="확장메뉴 삼각형"></p>
+                            <ul class="subpage-nav-depth2 all-category">
+                                <li class="subpage-nav-d2-item current"><a href="ceo.html">기업소개</a></li>
+                                <li class="subpage-nav-d2-item"><a href="architecture.html">사업영역</a></li>
+                                <li class="subpage-nav-d2-item"><a href="ideal.html">인재채용</a></li>
+                                <li class="subpage-nav-d2-item"><a href="news.html">고객센터</a></li>
+                            </ul>
+                        </li>
+                        <!-- 페이지 리스트 -->
+                        <li class="subpage-nav-item page">
+                            <p class="current-page">인사말 <img class="nav-expand-triangle" src="source/img/icons/triangle_white.svg" alt="확장메뉴 삼각형"></p>
+                            <ul class="subpage-nav-depth2 all-page">
+                                <li class="subpage-nav-d2-item current"><a href="ceo.html">인사말</a></li>
+                                <li class="subpage-nav-d2-item"><a href="vision.html">비전</a></li>
+                                <li class="subpage-nav-d2-item"><a href="way.html">오시는 길</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -273,6 +278,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="js/javascript.js"></script>
+    <script type="text/javascript" src="js/subpage.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {

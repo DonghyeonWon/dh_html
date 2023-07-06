@@ -9,6 +9,11 @@
     --dark-overlayer: rgba(0,0,0,0.4); /* 이미지 위 레이어드 영역의 배경색 */
     --line-height-common: 1.4;
 
+    --header-height-normal: 100px;
+    --header-height-1024: 85px;
+    --header-height-768: 70px;
+    --header-height-480: 60px;
+
     /* 그리드 시스템 **/
     --grid-padding-normal: 0 24px;
     --grid-padding-768: 0 1rem;
