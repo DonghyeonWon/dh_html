@@ -2,7 +2,7 @@
 //
 //************************************************************************************
 
-var subpageNavItem = $('.subpage .subpage-nav-item');
+var subpageNavItem = $('#subpage .subpage-nav-item');
 
 $(document).ready(function(){
     subpageNavItem.click(function(){
@@ -13,6 +13,6 @@ $(document).ready(function(){
 
 $('html').click(function(e){
     if($(e.target).parents('.subpage-nav-item').length < 1){
-        $('.subpage .subpage-nav-item').removeClass('active');
+        $('#subpage .subpage-nav-item').removeClass('active');
     }
 });
