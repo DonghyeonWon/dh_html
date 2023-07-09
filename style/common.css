@@ -9,39 +9,96 @@
     --dark-overlayer: rgba(0,0,0,0.4); /* 이미지 위 레이어드 영역의 배경색 */
     --line-height-common: 1.4;
 
-    --header-height-normal: 100px;
-    --header-height-1024: 85px;
-    --header-height-768: 70px;
-    --header-height-480: 60px;
+    --header-height: 100px;
+
+    /* 섹션 탑바텀 패딩 **/
+    --topbottom-padding: 150px 0;
 
     /* 그리드 시스템 **/
-    --grid-padding-normal: 0 24px;
-    --grid-padding-768: 0 1rem;
-    --grid-padding-320: 0 0.8rem;
-    --gap-normal: 24px;
-    --gap-768: 1rem;
-    --gap-320: 0.8rem;
+    --grid-padding: 0 24px;
+    --grid-gap: 24px;
 
     /* 섹션 타이틀 영역 폰트 **/
-    --section-title-normal: 4rem;
-    --section-title-1200: 3.5rem;
-    --section-title-768: 3rem;
-    --section-title-320: 2.5rem;
-    --section-title-weight-1: bold;
-    --section-title-weight-2: 500;
+    --section-title: 4rem;
+    --section-title-weight: bold;
 
-    --section-desc-normal: 1.4rem;
-    --section-desc-768: 1.2rem;
-    --section-desc-480: 1rem;
+    --section-desc: 1.4rem;
 
     /* 컨텐츠 타이틀 영역 폰트 **/
-    --contents-title-normal: 1.4rem;
-    --contents-title-1200: 1.2rem;
-    --contents-title-1024: 1rem;
+    --contents-title: 1.4rem;
     --contents-title-weight: 400;
 
-    --contents-desc-normal: 1rem;
-    --contents-desc-1200: 0.8rem;
+    --contents-desc: 1rem;
+
+    /* 본문 폰트 **/
+    --para-text: 1.2rem;
+}
+@media (max-width: 1200px) {
+    :root {
+        /* 섹션 타이틀 폰트 **/
+        --section-title: 3.5rem;
+
+        /* 컨텐츠 타이틀 영역 **/
+        --contents-title: 1.2rem;
+        --contents-desc: 0.8rem;
+    }
+}
+@media (max-width: 1024px) {
+    :root {
+        /* 헤더높이 **/
+        --header-height: 85px;
+
+        /* 섹션 타이틀 영역 폰트 **/
+        --section-title-weight: 500;
+
+        /* 컨텐츠 타이틀 영역 폰트 **/
+        --contents-title: 1rem;
+
+        /* 본문 폰트 **/
+        --para-text: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    :root {
+        /* 헤더높이 **/
+        --header-height: 70px;
+
+        /* 섹션 탑바텀 패딩 **/
+        --topbottom-padding: 100px 0;
+
+        /* 그리드 시스템 **/
+        --grid-padding: 0 1rem;
+        --grid-gap: 1rem;
+
+        /* 섹션 타이틀 영역 폰트 **/
+        --section-title: 3rem;
+        --section-desc: 1.2rem;
+    }
+}
+@media (max-width: 480px) {
+    :root {
+        /* 헤더높이 **/
+        --header-height: 60px;
+
+        /* 섹션 타이틀 영역 폰트 **/
+        --section-desc: 1rem;
+    }
+}
+@media (max-width: 320px) {
+    :root {
+        /* 그리드 시스템 **/
+        --grid-padding: 0 0.8rem;
+        --grid-gap: 0.8rem;
+
+        /* 섹션 탑바텀 패딩 **/
+        --topbottom-padding: 80px 0;
+
+        /* 섹션 타이틀 영역 폰트 **/
+        --section-title: 2.5rem;
+
+        /* 본문 폰트 **/
+        --para-text: 0.8rem;
+    }
 }
 
 #m-gnb {

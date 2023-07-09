@@ -6,7 +6,7 @@
 #subpage {
     position: relative;
     width: 100%; height: auto;
-    margin-top: var(--header-height-normal);
+    margin-top: var(--header-height);
     z-index: 89;
 }
 #subpage .subpage-container {
@@ -24,11 +24,11 @@
 #subpage .subpage-title {
     position: relative;
     width: 100%; height: 400px;
-    padding: var(--grid-padding-normal);
+    padding: var(--grid-padding);
     display: grid;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: 1fr;
-    grid-gap: var(--gap-normal);
+    grid-gap: var(--grid-gap);
     align-items: center;
     background: lime;
     background-position: center center;
@@ -50,20 +50,20 @@
     width: auto; height: auto;
     display: flex;
     flex-direction: column;
-    grid-gap: var(--gap-normal);
+    grid-gap: var(--grid-gap);
     grid-column: 3/11;
     z-index: 50;
 }
 #subpage .subpage-title-wrap h3 {
     line-height: var(--line-height-common);
-    font-size: var(--section-title-normal);
-    font-weight: var(--section-title-weight-1);
+    font-size: var(--section-title);
+    font-weight: var(--section-title-weight);
     color: #fff;
     text-shadow: var(--text-shadow);
 }
 #subpage .subpage-title-wrap h6 {
     line-height: var(--line-height-common);
-    font-size: var(--section-desc-normal);
+    font-size: var(--section-desc);
     color: #fafafa;
     text-shadow: var(--text-shadow);
 }
@@ -71,11 +71,11 @@
 #subpage .subpage-top-nav {
     position: relative;
     width: 100%; height: auto;
-    padding: var(--grid-padding-normal);
+    padding: var(--grid-padding);
     display: grid;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: 1fr;
-    grid-gap: var(--gap-normal);
+    grid-gap: var(--grid-gap);
     background: var(--sub-text-2);
 }
 #subpage .subpage-nav-list {
@@ -171,48 +171,205 @@
 #ceo {
     position: relative;
     width: 100%; height: auto;
-    padding: 150px 0;
+    padding: var(--topbottom-padding);
 }
 #ceo .ceo-container {
     position: relative;
     width: 100%; height: auto;
-    padding: var(--grid-padding-normal);
+    padding: var(--grid-padding);
     display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 1fr;
-    grid-gap: var(--gap-normal);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: var(--grid-gap);
+    grid-row-gap: 2rem
 }
 #ceo .ceo-image {
     position: relative;
-    width: auto; height: auto;
-    display: flex; flex-direction: column;
-    grid-column: 2/6;
-    grid-gap: var(--gap-normal);
+    width: 100%; height: 400px;
+    display: flex; flex-direction: row;
+    background-image: url(../source/img/sub01/ceo_banner.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 2/12;
+}
+#ceo .ceo-image img {
+    position: absolute;
+    right: 5rem; bottom: 0;
+    width: auto; height: 120%;
 }
 #ceo .ceo-name-wrap {
     position: relative;
     width: 100%; height: auto;
-    display: flex; flex-direction: row;
-    justify-content: center; align-items: center;
-    grid-gap: 1rem;
+    padding-left: 5rem;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    grid-gap: var(--grid-gap);
     color: var(--main-text);
 }
-#ceo .ceo-name-wrap span {
-    font-size: var(--section-desc-normal);
+#ceo .short-message {
+    position: relative;
+    font-size: 2rem;
     font-weight: 500;
     line-height: 1.4;
 }
-#ceo .ceo-name-wrap h3 {
-    font-size: 2.5rem;
-    font-weight: var(--section-title-weight-1);
-    color: var(--primary-color);
-    line-height: 1;
+#ceo .ceo-hello {
+    position: relative;
+    display: flex; flex-direction: column;
+    font-size: 1.4rem;
+    font-weight: 400;
+    grid-gap: 1rem;
+}
+#ceo .ceo-hello span {
+    font-size: 2rem;
+    font-weight: 500;
 }
 #ceo .ceo-message {
     position: relative;
     width: auto; height: auto;
-    grid-column: 7/12;
+    grid-column: 2/12;
     color: var(--main-text);
-    font-size: 1.2rem;
+    font-size: var(--para-text);
     line-height: 1.6;
+}
+
+/* 1025 ~ 1200 대응 **/
+@media (max-width: 1200px) {
+    #subpage .subpage-title {
+        height: 350px;
+    }
+
+    /* 인사말 페이지 **/
+    #ceo .ceo-image {
+        grid-column: 1/13;
+    }
+    #ceo .ceo-image img {
+        height: 90%;
+    }
+    #ceo .ceo-message {
+        grid-column: 1/13;
+    }
+}
+
+/* 769 ~ 1024 대응 **/
+@media (max-width: 1024px) {
+    #subpage .subpage-top-nav {
+        padding: 0;
+    }
+    #subpage .subpage-nav-list {
+        grid-column: 1/13;
+    }
+    #ceo .ceo-image {
+        height: 300px;
+    }
+    #ceo .ceo-image img {
+        right: 2rem;
+    }
+    #ceo .ceo-name-wrap {
+        padding-left: 2rem;
+    }
+    #ceo .short-message {
+        font-size: 1.5rem;
+    }
+    #ceo .ceo-hello {
+        font-size: 1.2rem;
+    }
+    #ceo .ceo-hello span {
+        font-size: 1.5rem;
+    }
+}
+
+/* 641 ~ 768 대응 **/
+@media (max-width: 768px) {
+    #subpage.ceo .subpage-title {
+        height: 300px;
+    }
+    #subpage .subpage-nav-item {
+        width: 120px;
+    }
+    #subpage .subpage-nav-item a {
+        padding: 1rem 0;
+    }
+    #subpage .subpage-nav-item.home img {
+        height: 0.8rem;
+    }
+    #subpage .current-category, #subpage .current-page {
+        font-size: 0.8rem;
+    }
+}
+
+/* 481 ~ 640 대응 **/
+@media (max-width: 640px) {
+    #subpage.ceo .subpage-title {
+        height: 250px;
+    }
+    #subpage .subpage-title-wrap {
+        grid-column: 2/12;
+    }
+    #subpage .subpage-nav-list {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    #subpage .subpage-nav-item {
+        width: 100%
+    }
+
+    #ceo .ceo-image {
+        height: 250px;
+    }
+    #ceo .ceo-image img {
+        right: 1rem;
+    }
+    #ceo .ceo-name-wrap {
+        padding-left: 1rem;
+    }
+    #ceo .short-message {
+        font-size: 1.2rem;
+    }
+    #ceo .ceo-hello {
+        font-size: 1rem;
+    }
+    #ceo .ceo-hello span {
+        font-size: 1.2rem;
+    }
+}
+
+/* 321 ~ 480 대응 **/
+@media (max-width: 480px) {
+    #subpage .subpage-nav-item.home a {
+        padding: 1rem 0;
+    }
+    #subpage .current-category, #subpage .current-page {
+        padding: 1rem 0;
+    }
+
+    #ceo .ceo-image {
+        height: auto;
+        padding: 2rem 1rem 0 1rem;
+        flex-direction: column-reverse;
+        align-items: center;
+        grid-gap: 2rem;
+    }
+    #ceo .ceo-image img {
+        position: relative;
+        width: 80%; height: auto;
+        right: 0;
+    }
+    #ceo .ceo-name-wrap {
+        padding-left: 0;
+        grid-gap: 1rem;
+    }
+    #ceo .short-message {
+        text-align: center;
+    }
+    #ceo .ceo-hello {
+        text-align: center;
+    }
+}
+
+/* ~320 대응 **/
+@media (max-width: 320px) {
+    #subpage.ceo .subpage-title {
+        height: 200px;
+    }
 }
