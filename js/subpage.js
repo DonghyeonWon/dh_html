@@ -3,16 +3,23 @@
 //************************************************************************************
 
 var subpageNavItem = $('#subpage .subpage-nav-item');
+var timelineImage = $('#history .timeline-image');
 
 $(document).ready(function(){
     subpageNavItem.click(function(){
         $(this).toggleClass('active');
         $(this).siblings().removeClass('active');
     });
+
+    timelineImage.innerHeight(timelineImage.innerWidth()*0.6);
 });
 
 $('html').click(function(e){
     if($(e.target).parents('.subpage-nav-item').length < 1){
         $('#subpage .subpage-nav-item').removeClass('active');
     }
+});
+
+$(window).resize(function(){
+    timelineImage.innerHeight(timelineImage.innerWidth()*0.6);
 });
