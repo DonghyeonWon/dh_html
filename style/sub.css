@@ -44,6 +44,12 @@
 #subpage.way .subpage-title {
     background-image: url(../source/img/sub03/sub03_top_banner.jpg);
 }
+#subpage.architecture .subpage-title {
+    background-image: url(../source/img/sub04/sub04_top_banner.jpg);
+}
+#subpage.house .subpage-title {
+    background-image: url(../source/img/sub05/sub05_top_banner.jpg);
+}
 #subpage .subpage-title::after {
     content: '';
     position: absolute;
@@ -447,6 +453,9 @@
     align-items: center;
     grid-gap: 1rem;
 }
+#way .public-kinds-item br {
+    display: none;
+}
 #way .bus-type {
     position: relative;
     padding: 5px;
@@ -473,6 +482,159 @@
     width: 1.2rem; height: 1.2rem;
 }
 
+/* 사업영역 통합 **/
+#business-portfolio {
+    position: relative;
+    width: 100%; height: auto;
+    padding: var(--topbottom-padding);
+    color: var(--main-text);
+}
+#business-portfolio .portfolio-container {
+    position: relative;
+    width: 100%; height: auto;
+    padding: var(--grid-padding);
+    display: flex; flex-direction: column;
+    grid-gap: 4rem;
+}
+#business-portfolio .portfolio-desc {
+    position: relative;
+    width: 100%; height: auto;
+    display: flex; flex-direction: column;
+    grid-gap: var(--grid-gap);
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+}
+#business-portfolio .portfolio-desc br {
+    display: none;
+}
+#business-portfolio .portfolio-lists {
+    position: relative;
+    width: 100%; height: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: var(--grid-gap);
+    grid-row-gap: 3rem;
+}
+#business-portfolio .portfolio-item {
+    position: relative;
+    width: 100%; height: auto;
+    display: flex; flex-direction: column;
+    grid-gap: var(--grid-gap);
+    cursor: pointer;
+}
+#business-portfolio .portfolio-thumbnail {
+    position: relative;
+    width: 100%; height: auto;
+    background: lime;
+    background-position: center center;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    transition: 0.2s all ease-in-out;
+}
+#business-portfolio .portfolio-item:hover .portfolio-thumbnail {
+    background-size: 130%;
+}
+
+/* 건축사업 **/
+#business-portfolio.architecture .portfolio-item:nth-child(6n+1) .portfolio-thumbnail {
+    background-image: url(../source/img/sub04/portfolio_thumb01.jpg);
+}
+#business-portfolio.architecture .portfolio-item:nth-child(6n+2) .portfolio-thumbnail {
+    background-image: url(../source/img/sub04/portfolio_thumb02.jpg);
+}
+#business-portfolio.architecture .portfolio-item:nth-child(6n+3) .portfolio-thumbnail {
+    background-image: url(../source/img/sub04/portfolio_thumb03.jpg);
+}
+#business-portfolio.architecture .portfolio-item:nth-child(6n+4) .portfolio-thumbnail {
+    background-image: url(../source/img/sub04/portfolio_thumb04.jpg);
+}
+#business-portfolio.architecture .portfolio-item:nth-child(6n+5) .portfolio-thumbnail {
+    background-image: url(../source/img/sub04/portfolio_thumb05.jpg);
+}
+#business-portfolio.architecture .portfolio-item:nth-child(6n+6) .portfolio-thumbnail {
+    background-image: url(../source/img/sub04/portfolio_thumb06.jpg);
+}
+
+/* 주택사업 **/
+#business-portfolio.house .portfolio-item:nth-child(6n+1) .portfolio-thumbnail {
+    background-image: url(../source/img/sub05/thumb01.jpg);
+}
+#business-portfolio.house .portfolio-item:nth-child(6n+2) .portfolio-thumbnail {
+    background-image: url(../source/img/sub05/thumb02.png);
+}
+#business-portfolio.house .portfolio-item:nth-child(6n+3) .portfolio-thumbnail {
+    background-image: url(../source/img/sub05/thumb03.jpg);
+}
+#business-portfolio.house .portfolio-item:nth-child(6n+4) .portfolio-thumbnail {
+    background-image: url(../source/img/sub05/thumb04.jpg);
+}
+#business-portfolio.house .portfolio-item:nth-child(6n+5) .portfolio-thumbnail {
+    background-image: url(../source/img/sub05/thumb05.jpg);
+}
+#business-portfolio.house .portfolio-item:nth-child(6n+6) .portfolio-thumbnail {
+    background-image: url(../source/img/sub05/thumb06.jpg);
+}
+
+#business-portfolio .portfolio-name {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--main-text);
+    transition: 0.2s all ease-in-out;
+}
+#business-portfolio .portfolio-item:hover .portfolio-name {
+    color: var(--primary-color);
+}
+#business-portfolio .view-more {
+    position: relative;
+    width: auto; height: auto;
+    padding: 1.2rem 2rem;
+    display: flex; flex-direction: row;
+    justify-content: center; align-items: center;
+    align-self: center;
+    grid-gap: 1rem;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+}
+#business-portfolio .view-more-icon {
+    position: relative;
+    width: 1rem; height: 1rem;
+}
+#business-portfolio .view-more-icon::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 50%;
+    width: 100%; height: 1px;
+    background: var(--primary-color);
+    transform: translateY(-50%);
+    transition: 0.2s all ease-in-out;
+}
+#business-portfolio .view-more-icon::after {
+    content: '';
+    position: absolute;
+    left: 50%; top: 0;
+    width: 1px; height: 100%;
+    background: var(--primary-color);
+    transform: translateX(-50%);
+    transition: 0.2s all ease-in-out;
+}
+@media (hover:hover) and (pointer:fine) {
+    #business-portfolio .view-more:hover {
+        background: var(--primary-color);
+        color: #fff;
+    }
+    #business-portfolio .view-more:hover .view-more-icon::before {
+        background: #fff;
+    }
+    #business-portfolio .view-more:hover .view-more-icon::after {
+        background: #fff;
+    }
+}
+
 /* 1025 ~ 1200 대응 **/
 @media (max-width: 1200px) {
     #subpage .subpage-title {
@@ -496,6 +658,26 @@
     }
     #history .timeline-detials-item {
         line-height: 1.4;
+    }
+
+    /* 오시는길 페이지 **/
+    /* 카카오맵 **/
+    #daumRoughmapContainer1689006235967 {
+        grid-column: 1/13;
+    }
+    #way .way-table {
+        grid-column: 1/13;
+    }
+
+    /* 사업영역 공통 **/
+    #business-portfolio .portfolio-desc {
+        font-size: 1.2rem;
+    }
+    #business-portfolio .portfolio-desc br {
+        display: block;
+    }
+    #business-portfolio .portfolio-name {
+        font-size: 1.2rem;
     }
 }
 
@@ -535,6 +717,31 @@
     }
     #history .timeline-detials-item {
         font-size: 1rem;
+    }
+
+    /* 오시는 길 **/
+    /* 카카오맵 **/
+    #daumRoughmapContainer1689006235967 {
+        height: 400px;
+    }
+    #way .way-table th {
+        width: 20%;
+        padding: 16px;
+    }
+    #way .way-table td {
+        width: 80%;
+        padding: 16px;
+    }
+    #way .way-public {
+        padding-left: 80px;
+    }
+    #way .public-kinds-item {
+        line-height: 1.4;
+    }
+
+    /* 사업영역 공통 **/
+    #business-portfolio .portfolio-lists {
+        grid-template-columns: repeat(3,1fr);
     }
 }
 
@@ -597,6 +804,23 @@
     #history .timeline-detials-item {
         padding-left: 80px;
     }
+
+    /* 오시는 길 **/
+    #way .way-table td {
+        line-height: 1.4;
+    }
+
+    /* 사업영역 공통 **/
+    #business-portfolio .portfolio-container {
+        grid-gap: 3rem;
+    }
+    #business-portfolio .portfolio-desc {
+        font-size: 1rem;
+    }
+    #business-portfolio .portfolio-lists {
+        grid-template-columns: repeat(2,1fr);
+        grid-row-gap: 2.5rem;
+    }
 }
 
 /* 481 ~ 640 대응 **/
@@ -637,6 +861,43 @@
     /* 연혁 **/
     #history .history-catchphrase {
         font-size: 2rem;
+    }
+
+    /* 오시는 길 **/
+    /* 카카오맵 **/
+    #daumRoughmapContainer1689006235967 {
+        height: 300px;
+    }
+    #way .way-table th {
+        width: 25%;
+        font-size: 1rem;
+    }
+    #way .way-table td {
+        font-size: 0.8rem;
+    }
+    #way .way-public {
+        padding-left: 0;
+        display: flex; flex-direction: column;
+        grid-gap: var(--grid-gap);
+    }
+    #way .public-type {
+        position: relative;
+        font-size: 1rem;
+    }
+    #way .public-destination {
+        font-size: 1rem;
+    }
+
+    /* 사업영역 공통 **/
+    #business-portfolio .portfolio-name {
+        font-size: 1rem;
+    }
+    #business-portfolio .view-more {
+        padding: 0.8rem 1rem;
+        font-size: 0.8rem;
+    }
+    #business-portfolio .view-more-icon {
+        width: 0.8rem; height: 0.8rem;
     }
 }
 
@@ -695,6 +956,30 @@
     }
     #history .timeline-details::before {
         left: 7px;
+    }
+
+    /* 오시는 길 **/
+    /* 카카오맵 **/
+    #daumRoughmapContainer1689006235967 {
+        height: 200px;
+    }
+    #way .public-kinds-item br {
+        display: block;
+    }
+
+    /* 사업영역 공통 **/
+    #business-portfolio .portfolio-desc {
+        font-size: 0.8rem;
+    }
+    #business-portfolio .portfolio-desc br {
+        display: none;
+    }
+    #business-portfolio .portfolio-lists {
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
+    #business-portfolio .portfolio-item:nth-child(n+9) {
+        display: none;
     }
 }
 

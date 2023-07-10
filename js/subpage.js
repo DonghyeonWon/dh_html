@@ -4,6 +4,7 @@
 
 var subpageNavItem = $('#subpage .subpage-nav-item');
 var timelineImage = $('#history .timeline-image');
+var portfolioThumb = $('#business-portfolio .portfolio-thumbnail');
 
 $(document).ready(function(){
     subpageNavItem.click(function(){
@@ -12,6 +13,7 @@ $(document).ready(function(){
     });
 
     timelineImage.innerHeight(timelineImage.innerWidth()*0.6);
+    portfolioThumb.innerHeight(portfolioThumb.innerWidth()*0.6);
 });
 
 $('html').click(function(e){
@@ -22,4 +24,5 @@ $('html').click(function(e){
 
 $(window).resize(function(){
     timelineImage.innerHeight(timelineImage.innerWidth()*0.6);
+    portfolioThumb.innerHeight(portfolioThumb.innerWidth()*0.6);
 });

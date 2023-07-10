@@ -108,15 +108,15 @@
         </div>
     </header>
 
-    <div id="subpage" class="way">
+    <div id="subpage" class="house">
         <div class="subpage-container">
             <!-- 서브페이지의 상단영역 [현재페이지 배너 및 미니 내비게이션] -->
             <div class="subpage-top">
                 <!-- 현재 페이지의 이름 -->
                 <div class="subpage-title">
                     <div class="subpage-title-wrap">
-                        <h3>오시는 길</h3>
-                        <h6>Way to visit</h6>
+                        <h3>주택사업</h3>
+                        <h6>House</h6>
                     </div>
                 </div>
                 <!-- 서브페이지용 미니 내비게이션 [ 홈 | 카테고리 | 페이지 ] 로 구성돼있음 -->
@@ -128,7 +128,7 @@
                         </li>
                         <!-- 카테고리 리스트 -->
                         <li class="subpage-nav-item category">
-                            <p class="current-category">기업소개 <img class="nav-expand-triangle" src="source/img/icons/triangle_white.svg" alt="확장메뉴 삼각형"></p>
+                            <p class="current-category">사업영역 <img class="nav-expand-triangle" src="source/img/icons/triangle_white.svg" alt="확장메뉴 삼각형"></p>
                             <ul class="subpage-nav-depth2 all-category">
                                 <li class="subpage-nav-d2-item current"><a href="ceo.html">기업소개</a></li>
                                 <li class="subpage-nav-d2-item"><a href="architecture.html">사업영역</a></li>
@@ -138,11 +138,12 @@
                         </li>
                         <!-- 페이지 리스트 -->
                         <li class="subpage-nav-item page">
-                            <p class="current-page">오시는 길 <img class="nav-expand-triangle" src="source/img/icons/triangle_white.svg" alt="확장메뉴 삼각형"></p>
+                            <p class="current-page">주택사업 <img class="nav-expand-triangle" src="source/img/icons/triangle_white.svg" alt="확장메뉴 삼각형"></p>
                             <ul class="subpage-nav-depth2 all-page">
-                                <li class="subpage-nav-d2-item current"><a href="ceo.html">인사말</a></li>
-                                <li class="subpage-nav-d2-item"><a href="history.html">연혁</a></li>
-                                <li class="subpage-nav-d2-item"><a href="way.html">오시는 길</a></li>
+                                <li class="subpage-nav-d2-item current"><a href="architecture.html">건축사업</a></li>
+                                <li class="subpage-nav-d2-item"><a href="house.html">주택사업</a></li>
+                                <li class="subpage-nav-d2-item"><a href="civil.html">토목사업</a></li>
+                                <li class="subpage-nav-d2-item"><a href="landscape.html">조경사업</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -151,88 +152,65 @@
         </div>
     </div>
 
-    <div id="way">
-        <div class="way-container">
-            <div class="way-map-kakao">
-                <!--
-                * 카카오맵 - 약도서비스
-                * 한 페이지 내에 약도를 2개 이상 넣을 경우에는
-                * 약도의 수 만큼 소스를 새로 생성, 삽입해야 합니다.
-                -->
-                <!-- 1. 약도 노드 -->
-                <div id="daumRoughmapContainer1689006235967" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-
-                <!-- 2. 설치 스크립트 -->
-                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-                <!-- 3. 실행 스크립트 -->
-                <script charset="UTF-8">
-                    new daum.roughmap.Lander({
-                        "timestamp" : "1689006235967",
-                        "key" : "2fgn2",
-                    }).render();
-                </script>
+    <div id="business-portfolio" class="house">
+        <div class="portfolio-container">
+            <div class="portfolio-desc">
+                <span>사람의 일생에서 집은 안정적인 울타리가<br> 되어야 하는 무엇보다 소중한 공간입니다.</span>
+                <span>미래건설은 규모와 역량을 키워오면서도 살수록 정이 드는 집,<br> 꿈이 있는 살기 좋은 집을 짓겠다는 일념을 지켜왔습니다.</span>
+                <span>마음을 다해 짓겠다는 진심은 공간을 새로이 창조하는 노하우가 되었고,<br> 고객에게는 삶의 자부심이 되었습니다.</span>
             </div>
-            <div class="way-detail-info">
-                <table class="way-table" border="0" width="100%" height="auto">
-                    <tr>
-                        <th>주소</th>
-                        <td>41911 대구광역시 중구 공평로 88 &#40;동인동1가 2-1&#41;</td>
-                    </tr>
-                    <tr>
-                        <th>전화번호</th>
-                        <td>000-000-0000, 000-000-0001</td>
-                    </tr>
-                    <tr>
-                        <th>대중교통</th>
-                        <td>
-                            <div class="way-public-wrap">
-                                <div class="way-public bus">
-                                    <h3 class="public-type">버스</h3>
-                                    <div class="public-list">
-                                        <p class="public-destination">대구시동인청사</p>
-                                        <ul class="public-kinds-list">
-                                            <li class="public-kinds-item"><div class="bus-type g">간선</div> 524</li>
-                                            <li class="public-kinds-item"><div class="bus-type j">지선</div> 동구2(북구청방면),<br>동구2(시청방면)</li>
-                                            <li class="public-kinds-item"><div class="bus-type f">급행</div> 급행6</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="way-public metro">
-                                    <h3 class="public-type">지하철</h3>
-                                    <div class="public-list">
-                                        <ul class="public-kinds-list">
-                                            <li class="public-kinds-item">
-                                                <div class="metro-number">
-                                                    <img src="source/img/icons/line01.svg" alt="1호선">
-                                                </div>
-                                                중앙로역 3번출구(도보12분), 칠성시장역2번 출구(도보15분), 대구역 3번출구(도보15분)
-                                            </li>
-                                            <li class="public-kinds-item">
-                                                <div class="metro-number">
-                                                    <img src="source/img/icons/line02.svg" alt="2호선">
-                                                </div>
-                                                경대병원역 1번출구(도보17분)
-                                            </li>
-                                            <li class="public-kinds-item">
-                                                <div class="metro-number">
-                                                    <img src="source/img/icons/transfer.svg" alt="환승">
-                                                    <img src="source/img/icons/line01.svg" alt="1호선">
-                                                    <img src="source/img/icons/line02.svg" alt="2호선">
-                                                </div>
-                                                반월당역 10번출구(도보18분)
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>자가차량</th>
-                        <td>미래건설 주차장</td>
-                    </tr>
-                </table>
+            <ul class="portfolio-lists">
+                <li class="portfolio-item">
+                        <div class="portfolio-thumbnail"><!--백그라운드 대체--></div>
+                        <p class="portfolio-name">경성시 진해동 타운레이스</p>
+                </li>
+                <li class="portfolio-item">
+                        <div class="portfolio-thumbnail"><!--백그라운드 대체--></div>
+                        <p class="portfolio-name">진주시 흑석동 미래채 아파트</p>
+                </li>
+                <li class="portfolio-item">
+                        <div class="portfolio-thumbnail"><!--백그라운드 대체--></div>
+                        <p class="portfolio-name">위영시 애경동 미래채 아파트</p>
+                </li>
+                <li class="portfolio-item">
+                        <div class="portfolio-thumbnail"><!--백그라운드 대체--></div>
+                        <p class="portfolio-name">진산시 유진동 미래채 아파트</p>
+                </li>
+                <li class="portfolio-item">
+                        <div class="portfolio-thumbnail"><!--백그라운드 대체--></div>
+                        <p class="portfolio-name">서울시 삼성동 트리아농 아파트</p>
+                </li>
+                <li class="portfolio-item">
+                        <div class="portfolio-thumbnail"><!--백그라운드 대체--></div>
+                        <p class="portfolio-name">은평시 조평3동 주택재개발사업</p>
+                </li>
+                <li class="portfolio-item">
+                        <div class="portfolio-thumbnail"><!--백그라운드 대체--></div>
+                        <p class="portfolio-name">경성시 진해동 타운레이스</p>
+                </li>
+                <li class="portfolio-item">
+                        <div class="portfolio-thumbnail"><!--백그라운드 대체--></div>
+                        <p class="portfolio-name">진주시 흑석동 미래채 아파트</p>
+                </li>
+                <li class="portfolio-item">
+                        <div class="portfolio-thumbnail"><!--백그라운드 대체--></div>
+                        <p class="portfolio-name">위영시 애경동 미래채 아파트</p>
+                </li>
+                <li class="portfolio-item">
+                        <div class="portfolio-thumbnail"><!--백그라운드 대체--></div>
+                        <p class="portfolio-name">진산시 유진동 미래채 아파트</p>
+                </li>
+                <li class="portfolio-item">
+                        <div class="portfolio-thumbnail"><!--백그라운드 대체--></div>
+                        <p class="portfolio-name">서울시 삼성동 트리아농 아파트</p>
+                </li>
+                <li class="portfolio-item">
+                        <div class="portfolio-thumbnail"><!--백그라운드 대체--></div>
+                        <p class="portfolio-name">은평시 조평3동 주택재개발사업</p>
+                </li>
+            </ul>
+            <div class="view-more">
+                더 보기 <div class="view-more-icon"></div>
             </div>
         </div>
     </div>
