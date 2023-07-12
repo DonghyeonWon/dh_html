@@ -5,6 +5,8 @@
 var subpageNavItem = $('#subpage .subpage-nav-item');
 var timelineImage = $('#history .timeline-image');
 var portfolioThumb = $('#business-portfolio .portfolio-thumbnail');
+var idealSummaryImg = $('#ideal .ideal-summary-image');
+var idealValueIcon = $('.ideal-value-icon');
 
 $(document).ready(function(){
     subpageNavItem.click(function(){
@@ -14,6 +16,8 @@ $(document).ready(function(){
 
     timelineImage.innerHeight(timelineImage.innerWidth()*0.6);
     portfolioThumb.innerHeight(portfolioThumb.innerWidth()*0.6);
+    idealSummaryImg.innerHeight(idealSummaryImg.innerWidth()*1.4);
+    idealValueIcon.innerHeight(idealValueIcon.innerWidth());
 });
 
 $('html').click(function(e){
@@ -25,4 +29,6 @@ $('html').click(function(e){
 $(window).resize(function(){
     timelineImage.innerHeight(timelineImage.innerWidth()*0.6);
     portfolioThumb.innerHeight(portfolioThumb.innerWidth()*0.6);
+    idealSummaryImg.innerHeight(idealSummaryImg.innerWidth()*1.4);
+    idealValueIcon.innerHeight(idealValueIcon.innerWidth());
 });

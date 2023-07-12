@@ -50,6 +50,15 @@
 #subpage.house .subpage-title {
     background-image: url(../source/img/sub05/sub05_top_banner.jpg);
 }
+#subpage.civil .subpage-title {
+    background-image: url(../source/img/sub06/sub06_top_banner.webp);
+}
+#subpage.landscape .subpage-title {
+    background-image: url(../source/img/sub07/sub07_top_banner.jpg);
+}
+#subpage.ideal .subpage-title {
+    background-image: url(../source/img/talent/talent_top_banner.jpg);
+}
 #subpage .subpage-title::after {
     content: '';
     position: absolute;
@@ -522,7 +531,7 @@
     position: relative;
     width: 100%; height: auto;
     display: flex; flex-direction: column;
-    grid-gap: var(--grid-gap);
+    grid-gap: 1rem;
     cursor: pointer;
 }
 #business-portfolio .portfolio-thumbnail {
@@ -576,6 +585,46 @@
 }
 #business-portfolio.house .portfolio-item:nth-child(6n+6) .portfolio-thumbnail {
     background-image: url(../source/img/sub05/thumb06.jpg);
+}
+
+/* 토목사업 **/
+#business-portfolio.civil .portfolio-item:nth-child(6n+1) .portfolio-thumbnail {
+    background-image: url(../source/img/sub06/thumb01.jpg);
+}
+#business-portfolio.civil .portfolio-item:nth-child(6n+2) .portfolio-thumbnail {
+    background-image: url(../source/img/sub06/thumb02.jpg);
+}
+#business-portfolio.civil .portfolio-item:nth-child(6n+3) .portfolio-thumbnail {
+    background-image: url(../source/img/sub06/thumb03.jpg);
+}
+#business-portfolio.civil .portfolio-item:nth-child(6n+4) .portfolio-thumbnail {
+    background-image: url(../source/img/sub06/thumb04.jpg);
+}
+#business-portfolio.civil .portfolio-item:nth-child(6n+5) .portfolio-thumbnail {
+    background-image: url(../source/img/sub06/thumb05.jpg);
+}
+#business-portfolio.civil .portfolio-item:nth-child(6n+6) .portfolio-thumbnail {
+    background-image: url(../source/img/sub06/thumb06.jpg);
+}
+
+/* 조경사업 **/
+#business-portfolio.landscape .portfolio-item:nth-child(6n+1) .portfolio-thumbnail {
+    background-image: url(../source/img/sub07/thumb01.jpg);
+}
+#business-portfolio.landscape .portfolio-item:nth-child(6n+2) .portfolio-thumbnail {
+    background-image: url(../source/img/sub07/thumb02.jpg);
+}
+#business-portfolio.landscape .portfolio-item:nth-child(6n+3) .portfolio-thumbnail {
+    background-image: url(../source/img/sub07/thumb03.jpg);
+}
+#business-portfolio.landscape .portfolio-item:nth-child(6n+4) .portfolio-thumbnail {
+    background-image: url(../source/img/sub07/thumb04.jpg);
+}
+#business-portfolio.landscape .portfolio-item:nth-child(6n+5) .portfolio-thumbnail {
+    background-image: url(../source/img/sub07/thumb05.jpg);
+}
+#business-portfolio.landscape .portfolio-item:nth-child(6n+6) .portfolio-thumbnail {
+    background-image: url(../source/img/sub07/thumb06.jpg);
 }
 
 #business-portfolio .portfolio-name {
@@ -633,6 +682,142 @@
     #business-portfolio .view-more:hover .view-more-icon::after {
         background: #fff;
     }
+}
+
+/* 인재상 **/
+#ideal {
+    position: relative;
+    width: 100%; height: auto;
+    padding: var(--topbottom-padding);
+    color: var(--main-text);
+}
+#ideal .ideal-container {
+    position: relative;
+    width: 100%; height: auto;
+    display: flex; flex-direction: column;
+    grid-gap: 4rem;
+}
+#ideal .ideal-summary {
+    position: relative;
+    width: 100%; height: auto;
+    padding: var(--grid-padding);
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: var(--grid-gap);
+}
+#ideal .ideal-summary-text {
+    position: sticky;
+    top: 24px;
+    width: 100%; height: fit-content;
+    display: flex; flex-direction: column;
+    grid-gap: var(--grid-gap);
+    grid-column: 2/8;
+}
+#ideal .ideal-summary-title {
+    font-size: 3rem;
+    line-height: 1.4;
+    font-weight: var(--section-title-weight);
+    background-image: url(../source/img/talent/text_background_01.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 2px rgba(49,149,255,0.3);
+}
+#ideal .ideal-summary-desc {
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+#ideal .ideal-summary-image {
+    position: relative;
+    width: 100%; height: auto;
+    grid-column: 8/13;
+    background-image: url(../source/img/talent/summary.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+#ideal .ideal-main-value {
+    position: relative;
+    width: 100%; height: auto;
+}
+#ideal .ideal-value-list {
+    position: relative;
+    width: 100%; height: auto;
+    padding: var(--grid-padding);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: var(--grid-gap);
+}
+#ideal .ideal-value-item {
+    position: relative;
+    width: 100%; height: fit-content;
+    padding: 24px;
+    display: flex; flex-direction: column;
+    grid-gap: var(--grid-gap);
+    background: #fafafa;
+    border-radius: 20px;
+}
+#ideal .ideal-value-icon {
+    position: relative;
+    width: 100%; height: auto;
+    display: flex; flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+}
+#ideal .ideal-value-icon img {
+    width: 80%; height: auto;
+}
+#ideal .ideal-value-icon .ideal-front {
+}
+#ideal .ideal-value-icon .ideal-back {
+    display: none;
+}
+#ideal .ideal-value-text {
+    position: relative;
+    width: 100%; height: auto;
+    display: flex; flex-direction: column;
+    grid-gap: 1rem;
+}
+#ideal .ideal-value-name {
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+#ideal .ideal-value-desc {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #666;
+}
+#ideal .ideal-value-toggle {
+    position: relative;
+    width: 3rem; height: 3rem;
+    align-self: flex-end;
+    background: #fff;
+    border-radius: 500px;
+    box-shadow: 2px 2px 4px rgba(150,150,150,0.1);
+    cursor: pointer;
+}
+#ideal .ideal-value-toggle::before {
+    content: '';
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 2px; height: 60%;
+    background: var(--primary-color);
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: 0.2s all ease-in-out;
+}
+#ideal .ideal-value-toggle::after {
+    content: '';
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 60%; height: 2px;
+    background: var(--primary-color);
+    transform: translate(-50%, -50%);
 }
 
 /* 1025 ~ 1200 대응 **/
@@ -987,5 +1172,10 @@
 @media (max-width: 320px) {
     #subpage .subpage-title {
         height: 200px;
+    }
+
+    /* 사업영역 공통 **/
+    #business-portfolio .portfolio-item {
+        grid-gap: 0.8rem;
     }
 }
