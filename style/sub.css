@@ -59,6 +59,9 @@
 #subpage.ideal .subpage-title {
     background-image: url(../source/img/talent/talent_top_banner.jpg);
 }
+#subpage.recruiting .subpage-title {
+    background-image: url(../source/img/talent/recruiting_top_banner.jpg);
+}
 #subpage .subpage-title::after {
     content: '';
     position: absolute;
@@ -882,11 +885,11 @@
     background: var(--primary-color);
     transform: translate(-50%, -50%);
 }
-#ideal .ideal-check-this {
+.check-this {
     position: relative;
     width: 100%; height: auto;
 }
-#ideal .ideal-check-wrap {
+.check-wrap {
     position: relative;
     width: 100%; height: auto;
     padding: var(--grid-padding);
@@ -896,14 +899,14 @@
     place-items: end;
     grid-gap: 1rem;
 }
-#ideal .ideal-check-wrap>* {
+.check-wrap>* {
     grid-column: 3/11;
 }
-#ideal .ideal-check-title {
+.check-title {
     font-size: 1.2rem;
     line-height: 1.4;
 }
-#ideal .ideal-check-wrap a {
+.check-wrap a {
     position: relative;
     display: block;
     width: auto; height: auto;
@@ -916,11 +919,114 @@
     line-height: 1.4;
     transition: 0.2s all ease-in-out;
 }
-#ideal .ideal-check-wrap a:hover {
+.check-wrap a:hover {
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
     color: #fff;
     font-weight: 500;
+}
+
+/* 채용안내 **/
+#recruiting {
+    position: relative;
+    width: 100%; height: auto;
+    padding: var(--topbottom-padding);
+    background: #fafafa;
+    color: var(--main-text);
+}
+#recruiting .recruiting-container {
+    position: relative;
+    width: 100%; height: auto;
+    display: flex; flex-direction: column;
+    grid-gap: 4rem;
+}
+#recruiting .recruiting-top-text {
+    position: relative;
+    width: 100%; height: auto;
+    padding: var(--grid-padding);
+}
+#recruiting .recruiting-top-desc {
+    position: relative;
+    width: 100%; height: auto;
+    display: flex; flex-direction: column;
+    grid-gap: var(--grid-gap);
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+}
+#recruiting .recruiting-progress {
+    position: relative;
+    width: 100%; height: auto;
+}
+#recruiting .progress-wrap {
+    position: relative;
+    width: 100%; height: auto;
+    padding: var(--grid-padding);
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: var(--grid-gap);
+    grid-row-gap: 2.5rem;
+}
+#recruiting .progress-title {
+    font-size: 3rem;
+    font-weight: var(--section-title-weight);
+    grid-column: 3/11;
+}
+#recruiting .progess-list {
+    position: relative;
+    width: 100%; height: auto;
+    padding: 24px;
+    grid-column: 3/11;
+    background: #fff;
+    border-radius: 20px;
+    display: flex; flex-direction: column;
+    grid-gap: var(--grid-gap);
+}
+#recruiting .progress-item {
+    position: relative;
+    width: 100%; height: auto;
+    display: flex; flex-direction: row;
+    justify-content: flex-start;
+    grid-gap: var(--grid-gap);
+}
+#recruiting .progress-item:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+#recruiting .progress-thumb {
+    position: relative;
+    width: 30%; height: auto;
+    background: lime;
+    border-radius: 2000px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#recruiting .document .progress-thumb {background-image: url(../source/img/talent/document.jpg);}
+#recruiting .compat .progress-thumb {background-image: url(../source/img/talent/meeting.jpg);}
+#recruiting .environment .progress-thumb {background-image: url(../source/img/talent/environment.jpg);}
+#recruiting .practice .progress-thumb {background-image: url(../source/img/talent/interview.jpg);}
+#recruiting .manage .progress-thumb {background-image: url(../source/img/talent/management.jpg);}
+#recruiting .health .progress-thumb {background-image: url(../source/img/talent/medical.jpg);}
+
+#recruiting .progress-details {
+    position: relative;
+    width: 50%; height: auto;
+    grid-column: 4/13;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    grid-gap: var(--grid-gap);
+}
+#recruiting .progress-name {
+    font-size: 2rem;
+    font-weight: 500;
+}
+#recruiting .progress-desc {
+    position: relative;
+    width: 100%; height: auto;
+    display: flex; flex-direction: column;
+    font-size: 1.2rem;
+    line-height: 1.4;
 }
 
 /* 1025 ~ 1200 대응 **/
@@ -979,7 +1085,7 @@
     #ideal .ideal-value-item:nth-child(2) {grid-column: 7/13;}
     #ideal .ideal-value-item:nth-child(3) {grid-column: 1/7;}
     #ideal .ideal-value-item:nth-child(4) {grid-column: 7/13;}
-    #ideal .ideal-check-wrap>* {
+    .check-wrap>* {
         grid-column: 1/13;
     }
 }
@@ -1139,6 +1245,28 @@
         grid-template-columns: repeat(2,1fr);
         grid-row-gap: 2.5rem;
     }
+
+    /* 인재상 **/
+    #ideal .ideal-container {
+        grid-gap: 3rem;
+    }
+    #ideal .ideal-summary-title {
+        font-size: 1.6rem;
+    }
+    #ideal .ideal-value-item {
+        padding-bottom: 1rem;
+    }
+    #ideal .ideal-value-text {
+        padding: 0 1rem;
+    }
+    #ideal .ideal-value-name {
+        font-size: 1.2rem;
+    }
+    #ideal .ideal-value-toggle {
+        width: 2.5rem; height: 2.5rem;
+        margin-right: 1rem;
+        box-shadow: 3px 3px 6px #e6e6e6, -3px -3px 6px #fafafa;
+    }
 }
 
 /* 481 ~ 640 대응 **/
@@ -1217,6 +1345,21 @@
     #business-portfolio .view-more-icon {
         width: 0.8rem; height: 0.8rem;
     }
+
+    /* 인재상 **/
+    #ideal .ideal-summary-image {
+        padding: 1rem;
+    }
+    #ideal .ideal-value-item.active .ideal-value-desc {
+        max-height: 500px;
+    }
+    #ideal .ideal-summary-desc br {
+        display: none;
+    }
+    /*
+    #ideal .ideal-value-item {
+        grid-column: 1/13 !important;
+    }*/
 }
 
 /* 321 ~ 480 대응 **/
@@ -1299,6 +1442,35 @@
     #business-portfolio .portfolio-item:nth-child(n+9) {
         display: none;
     }
+
+    /* 인재상 **/
+    #ideal .ideal-container {
+        grid-gap: 1rem;
+    }
+    #ideal .ideal-summary-image {
+        padding: 6rem 1rem;
+    }
+    #ideal .ideal-summary-title {
+        font-size: 1.4rem;
+    }
+    #ideal .ideal-summary-desc {
+        font-size: 0.8rem;
+    }
+    #ideal .ideal-value-item {
+        grid-column: 1/13 !important;
+    }
+    #ideal .ideal-value-item .ideal-value-desc {
+        font-size: 0.8rem;
+    }
+    .check-wrap {
+        grid-gap: 0.8rem;
+    }
+    .check-wrap>* {
+        font-size: 1rem;
+    }
+    .check-wrap a {
+        font-size: 0.8rem;
+    }
 }
 
 /* ~320 대응 **/
@@ -1310,5 +1482,19 @@
     /* 사업영역 공통 **/
     #business-portfolio .portfolio-item {
         grid-gap: 0.8rem;
+    }
+
+    /* 인재상 **/
+    #ideal .ideal-value-item {
+        padding-bottom: 0.8rem;
+    }
+    #ideal .ideal-value-item.active .ideal-value-text {
+        grid-gap: 0.8rem;
+    }
+    #ideal .ideal-value-text {
+        padding: 0 0.8rem;
+    }
+    #ideal .ideal-value-toggle {
+        margin-right: 0.8rem;
     }
 }

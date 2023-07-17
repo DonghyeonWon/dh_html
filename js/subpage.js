@@ -9,6 +9,7 @@ var idealSummaryImg = $('#ideal .ideal-summary-image');
 var idealValueItem = $('#ideal .ideal-value-item');
 var idealValueIcon = $('.ideal-value-icon');
 var idealValueToggleBtn = $('#ideal .ideal-value-toggle');
+var progressThumb = $('#recruiting .progress-thumb');
 
 $(document).ready(function(){
     subpageNavItem.click(function(){
@@ -18,8 +19,16 @@ $(document).ready(function(){
 
     timelineImage.innerHeight(timelineImage.innerWidth()*0.6);
     portfolioThumb.innerHeight(portfolioThumb.innerWidth()*0.6);
-    idealSummaryImg.innerHeight(idealSummaryImg.innerWidth()*0.5);
     idealValueIcon.innerHeight(idealValueIcon.innerWidth()*0.6);
+    progressThumb.innerHeight(progressThumb.innerWidth());
+
+    if($(window).innerWidth() >= 641) {
+        idealSummaryImg.innerHeight(idealSummaryImg.innerWidth() * 0.5);
+    }
+
+    if(($(window).innerWidth() >= 481) && ($(window).innerWidth() <= 640)) {
+        idealSummaryImg.innerHeight(idealSummaryImg.innerWidth() * 0.8);
+    }
 });
 
 $('html').click(function(e){
@@ -35,6 +44,14 @@ idealValueToggleBtn.click(function(){
 $(window).resize(function(){
     timelineImage.innerHeight(timelineImage.innerWidth()*0.6);
     portfolioThumb.innerHeight(portfolioThumb.innerWidth()*0.6);
-    idealSummaryImg.innerHeight(idealSummaryImg.innerWidth()*0.5);
     idealValueIcon.innerHeight(idealValueIcon.innerWidth()*0.6);
+    progressThumb.innerHeight(progressThumb.innerWidth());
+
+    if($(window).innerWidth() >= 641) {
+        idealSummaryImg.innerHeight(idealSummaryImg.innerWidth() * 0.5);
+    }
+
+    if(($(window).innerWidth() >= 481) && ($(window).innerWidth() <= 640)) {
+        idealSummaryImg.innerHeight(idealSummaryImg.innerWidth() * 0.8);
+    }
 });
