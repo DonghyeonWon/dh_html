@@ -10,6 +10,8 @@ var idealValueItem = $('#ideal .ideal-value-item');
 var idealValueIcon = $('.ideal-value-icon');
 var idealValueToggleBtn = $('#ideal .ideal-value-toggle');
 var progressThumb = $('#recruiting .progress-thumb');
+var employmentFilterExpand = $('#employment .employment-filter-name');
+var disabledPagination = $('#employment .pagination-item .disabled a');
 
 $(document).ready(function(){
     subpageNavItem.click(function(){
@@ -29,6 +31,20 @@ $(document).ready(function(){
     if(($(window).innerWidth() >= 481) && ($(window).innerWidth() <= 640)) {
         idealSummaryImg.innerHeight(idealSummaryImg.innerWidth() * 0.8);
     }
+
+    disabledPagination.on('click',function(e){
+        e.preventDefault();
+    });
+});
+
+employmentFilterExpand.click(function(){
+    $(this).toggleClass('active');
+    $(this).parent().toggleClass('active');
+});
+
+$('#employment .reset-btn').click(function(){
+    $('#employment .employment-search-form input').val('');
+    $('#employment .employment-section-1 input:checkbox').prop('checked', false);
 });
 
 $('html').click(function(e){
