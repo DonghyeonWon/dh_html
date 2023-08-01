@@ -12,6 +12,7 @@ var idealValueToggleBtn = $('#ideal .ideal-value-toggle');
 var progressThumb = $('#recruiting .progress-thumb');
 var employmentFilterExpand = $('#employment .employment-filter-name');
 var disabledPagination = $('#employment .pagination-item .disabled a');
+var searchConExpand = $('#employment .search-condition-expand');
 
 $(document).ready(function(){
     subpageNavItem.click(function(){
@@ -23,6 +24,7 @@ $(document).ready(function(){
     portfolioThumb.innerHeight(portfolioThumb.innerWidth()*0.6);
     idealValueIcon.innerHeight(idealValueIcon.innerWidth()*0.6);
     progressThumb.innerHeight(progressThumb.innerWidth());
+    searchConExpand.innerWidth(searchConExpand.innerHeight());
 
     if($(window).innerWidth() >= 641) {
         idealSummaryImg.innerHeight(idealSummaryImg.innerWidth() * 0.5);
@@ -40,6 +42,10 @@ $(document).ready(function(){
 employmentFilterExpand.click(function(){
     $(this).toggleClass('active');
     $(this).parent().toggleClass('active');
+});
+
+searchConExpand.click(function(){
+    $('.employment-section-1').toggleClass('active');
 });
 
 $('#employment .reset-btn').click(function(){
@@ -62,6 +68,7 @@ $(window).resize(function(){
     portfolioThumb.innerHeight(portfolioThumb.innerWidth()*0.6);
     idealValueIcon.innerHeight(idealValueIcon.innerWidth()*0.6);
     progressThumb.innerHeight(progressThumb.innerWidth());
+    searchConExpand.innerWidth(searchConExpand.innerHeight());
 
     if($(window).innerWidth() >= 641) {
         idealSummaryImg.innerHeight(idealSummaryImg.innerWidth() * 0.5);

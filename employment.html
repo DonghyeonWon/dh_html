@@ -159,9 +159,12 @@
                     <button class="reset-btn" type="reset">초기화 <i class="reset-icon"><img src="source/img/icons/reset.svg" alt="초기화 아이콘"></i></button>
                 </div>
                 <div class="employment-search-form">
-                    <input id="employ-search-box" name="employ-search-box" type="text" placeholder="채용 키워드를 입력하세요" value maxlength="30">
-                    <label for="employ-search-box">검색창</label>
-                    <i class="employ-search-btn"><img src="source/img/icons/search_black.svg" alt="검색 아이콘"></i>
+                    <div class="search-form-wrap">
+                        <input id="employ-search-box" name="employ-search-box" type="text" placeholder="채용 키워드를 입력하세요" value maxlength="30">
+                        <label for="employ-search-box">검색창</label>
+                        <i class="employ-search-btn"><img src="source/img/icons/search_black.svg" alt="검색 아이콘"></i>
+                    </div>
+                    <div class="search-condition-expand"></div>
                 </div>
                 <ul class="employment-filters">
                     <li class="employment-filter-item">
@@ -418,8 +421,8 @@
                 <ul class="pagination">
                     <li class="pagination-item">
                         <ul class="pagination-prev-group">
-                            <li class="page-prev-final disabled"><a href="#">처음으로</a></li>
-                            <li class="page-prev-1 disabled"><a href="#">이전</a></li>
+                            <li class="page-prev-final disabled"><a href="#"><img src="source/img/icons/firstfinal.svg" alt=""></a></li>
+                            <li class="page-prev-1 disabled"><a href="#"><img src="source/img/icons/prevnext.svg" alt=""></a></li>
                         </ul>
                     </li>
                     <li class="pagination-item">
@@ -430,12 +433,16 @@
                             <a href="#" class="pagination-each-pages">4</a>
                             <a href="#" class="pagination-each-pages">5</a>
                             <a href="#" class="pagination-each-pages">6</a>
+                            <a href="#" class="pagination-each-pages">7</a>
+                            <a href="#" class="pagination-each-pages">8</a>
+                            <a href="#" class="pagination-each-pages">9</a>
+                            <a href="#" class="pagination-each-pages">10</a>
                         </ul>
                     </li>
                     <li class="pagination-item">
                         <ul class="pagination-next-group">
-                            <li class="page-next-1"><a href="#">다음</a></li>
-                            <li class="page-next-final"><a href="#">마지막으로</a></li>
+                            <li class="page-next-1"><a href="#"><img src="source/img/icons/prevnext.svg" alt=""></a></li>
+                            <li class="page-next-final"><a href="#"><img src="source/img/icons/firstfinal.svg" alt=""></a></li>
                         </ul>
                     </li>
                 </ul>

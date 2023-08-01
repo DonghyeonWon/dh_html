@@ -1055,9 +1055,10 @@
     position: sticky;
     left: 0; top: 24px;
     width: 100%; height: fit-content;
-    grid-column: 1/5;
+    grid-column: 1/4;
     display: flex; flex-direction: column;
     grid-gap: 24px;
+    border-bottom: 1px solid #333;
 }
 #employment .employment-filter-title {
     position: relative;
@@ -1089,13 +1090,22 @@
 #employment .reset-icon img {
     width: auto; height: 0.8rem;
 }
-#employment .employment-search-form {
+#employment .search-form-wrap {
     position: relative;
     width: 100%; height: auto;
     padding: 1rem 24px;
     display: flex; flex-direction: row;
+    grid-gap: var(--grid-gap);
     background: #f0f0f0;
+}
+#employment .employment-search-form {
+    position: relative;
+    width: 100%; height: auto;
+    display: flex; flex-direction: row;
     grid-gap: 1rem;
+}
+#employment .search-condition-expand {
+    display: none;
 }
 #employment .employment-search-form label {
     display: none;
@@ -1130,9 +1140,12 @@
     padding-bottom: 1rem;
     display: flex; flex-direction: column;
     grid-gap: 0;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #cfcfcf;
     transition: 0.2s all ease-in-out;
     transition-delay: 0.1s;
+}
+#employment .employment-filter-item:last-child {
+    border-bottom: none;
 }
 #employment .employment-filter-name {
     position: relative;
@@ -1203,14 +1216,14 @@
 #employment .employment-section-2 {
     position: relative;
     width: 100%; height: auto;
-    grid-column: 5/13;
+    grid-column: 4/13;
     display: flex; flex-direction: column;
 }
 #employment .employment-total-count {
     position: relative;
     width: 100%; height: auto;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #333;
     color: #666;
     font-size: 1.2rem;
     line-height: 1.4;
@@ -1231,7 +1244,7 @@
     border-bottom: 1px solid #cfcfcf;
 }
 #employment .employment-list-item:last-child {
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #333;
 }
 #employment .employment-list-item a {
     position: relative;
@@ -1272,6 +1285,11 @@
     font-size: 1.5rem;
     line-height: 1.4;
     font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     color: #333;
 }
 #employment .recruit-limit {
@@ -1313,9 +1331,15 @@
 #employment .pagination-item a {
     color: #333;
 }
+#employment .pagination-item a img {
+    width: auto; height: 1.2rem;
+}
+#employment .pagination-next-group a img {
+    transform: rotate(180deg);
+}
 #employment .pagination-item .disabled a {
-    color: #aaa;
     cursor: default;
+    opacity: 0.5;
 }
 #employment .pagination-each-pages {
     position: relative;
@@ -1410,6 +1434,14 @@
     #recruiting .progess-list {
         grid-column: 1/13;
     }
+
+    /* 채용공고 **/
+    #employment .employment-section-1 {
+        grid-column: 1/5;
+    }
+    #employment .employment-section-2 {
+        grid-column: 5/13;
+    }
 }
 
 /* 769 ~ 1024 대응 **/
@@ -1502,6 +1534,64 @@
     }
     #recruiting .progress-desc {
         font-size: 1rem;
+    }
+
+    /* 채용공고 **/
+    #employment .employment-container {
+        grid-row-gap: 4rem;
+    }
+    #employment .employment-section-1 {
+        position: relative;
+        top: 0;
+        grid-column: 1/13;
+    }
+    #employment .employment-section-2 {
+        grid-column: 1/13;
+    }
+    #employment .search-form-wrap {
+        width: auto;
+        flex-grow: 1;
+    }
+    #employment .search-condition-expand {
+        position: relative;
+        width: auto; height: auto;
+        display: flex; flex-direction: row;
+        justify-content: center; align-items: center;
+        border: 2px solid #f0f0f0;
+        border-radius: 100px;
+        cursor: pointer;
+    }
+    #employment .search-condition-expand::after {
+        content: '';
+        position: absolute;
+        left: 50%; top: 50%;
+        width: 1rem; height: 2px;
+        background: #333;
+        transform: translate(-50%, -50%);
+        transition: 0.2s all ease-in-out;
+    }
+    #employment .employment-section-1.active .search-condition-expand::after {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    #employment .search-condition-expand::before {
+        content: '';
+        position: absolute;
+        left: 50%; top: 50%;
+        width: 2px; height: 1rem;
+        background: #333;
+        transform: translate(-50%,-50%);
+        transition: 0.2s all ease-in-out;
+    }
+    #employment .employment-section-1.active .search-condition-expand::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    #employment .employment-filters {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.2s all ease-in-out;
+    }
+    #employment .employment-section-1.active .employment-filters {
+        max-height: 480px;
     }
 }
 
@@ -1614,6 +1704,30 @@
     #recruiting .progress-desc {
         display: block;
     }
+
+    /* 채용공고 **/
+    #employment .employment-container {
+        grid-row-gap: 2rem;
+    }
+    #employment .employment-section-1 {
+        grid-gap: 1rem;
+    }
+    #employment .search-form-wrap {
+        padding: 1rem;
+    }
+    #employment .employment-search-form input {
+        width: 95%;
+    }
+    #employment .employ-search-btn {
+        right: 1rem
+    }
+    #employment .employment-filters {
+        grid-gap: 1rem;
+    }
+    #employment .pagination {
+        grid-gap: 2rem;
+        font-size: 1rem;
+    }
 }
 
 /* 481 ~ 640 대응 **/
@@ -1720,6 +1834,66 @@
     }
     #recruiting .progress-desc {
         font-size: 0.8rem;
+    }
+
+    /* 채용공고 **/
+    #employment .employment-container {
+        grid-row-gap: 2rem;
+    }
+    #employment .employment-section-1 {
+        grid-gap: 0.8rem;
+    }
+    #employment .search-form-wrap {
+        padding: 0.8rem;
+    }
+    #employment .employment-search-form {
+        grid-gap: 0.8rem;
+    }
+    #employment .employment-search-form input {
+        width: 90%;
+    }
+    #employment .employment-section-1 .employment-filters {
+        grid-gap: 0.8rem;
+    }
+    #employment .employment-filter-item {
+        padding-bottom: 0.8rem;
+    }
+    #employment .employment-filter-name {
+        padding: 0.8rem 0;
+    }
+    #employment .employment-filter-details {
+        grid-gap: 0.8rem;
+    }
+
+    #employment .employment-total-count {
+        padding-bottom: 0.8rem;
+        font-size: 1rem;
+    }
+    #employment .employment-list-item a {
+        padding: 0.8rem 0;
+        grid-gap: 0.8rem;
+    }
+    #employment .recruit-types li {
+        padding: 0.4rem;
+    }
+    #employment .recruit-title {
+        font-size: 1.2rem;
+    }
+
+    #employment .pagination {
+        grid-gap: 1.4rem;
+    }
+    #employment .pagination-item > ul {
+        grid-gap: 0.8rem;
+    }
+    #employment .pagination-item:nth-child(2) > ul {
+        flex-wrap: wrap;
+    }
+    #employment .pagination-item a img {
+        height: 1rem;
+    }
+    #employment .pagination-each-pages {
+        width: 1.4rem; height: 1.4rem;
     }
 }
 
@@ -1858,6 +2032,32 @@
     }
     #recruiting .progress-details {
         width: 100%;
+    }
+
+    /* 채용공고 **/
+    #employment .employment-container {
+        grid-row-gap: 1rem;
+    }
+    #employment .employment-search-form input {
+        font-size: 0.8rem;
+    }
+    #employment .employ-search-btn {
+        right: 0.8rem
+    }
+    #employment .employ-search-btn img {
+        height: 0.8rem;
+    }
+    #employment .search-condition-expand::after {width: 0.8rem;}
+    #employment .search-condition-expand::before {height: 0.8rem;}
+
+    #employment .recruit-title {
+        font-size: 1rem;
+    }
+    #employment .recruit-limit {
+        font-size: 0.8rem;
+    }
+    #employment .recruit-count {
+        font-size: 0.8rem;
     }
 }
 
