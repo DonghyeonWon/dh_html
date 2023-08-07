@@ -13,6 +13,7 @@ var progressThumb = $('#recruiting .progress-thumb');
 var employmentFilterExpand = $('#employment .employment-filter-name');
 var disabledPagination = $('#employment .pagination-item .disabled a');
 var searchConExpand = $('#employment .search-condition-expand');
+var newspageThumb = $('#newspage .newspage-thumbnail');
 
 $(document).ready(function(){
     subpageNavItem.click(function(){
@@ -25,6 +26,7 @@ $(document).ready(function(){
     idealValueIcon.innerHeight(idealValueIcon.innerWidth()*0.6);
     progressThumb.innerHeight(progressThumb.innerWidth());
     searchConExpand.innerWidth(searchConExpand.innerHeight());
+    newspageThumb.innerHeight(newspageThumb.innerWidth()*0.6);
 
     if($(window).innerWidth() >= 641) {
         idealSummaryImg.innerHeight(idealSummaryImg.innerWidth() * 0.5);
@@ -69,6 +71,7 @@ $(window).resize(function(){
     idealValueIcon.innerHeight(idealValueIcon.innerWidth()*0.6);
     progressThumb.innerHeight(progressThumb.innerWidth());
     searchConExpand.innerWidth(searchConExpand.innerHeight());
+    newspageThumb.innerHeight(newspageThumb.innerWidth()*0.6);
 
     if($(window).innerWidth() >= 641) {
         idealSummaryImg.innerHeight(idealSummaryImg.innerWidth() * 0.5);

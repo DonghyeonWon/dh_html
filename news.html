@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="source/favicon/favicon.svg">
+    <link rel="stylesheet" href="style/font.css">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/sub.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <title>미래건설</title>
+</head>
+
+<body>
+    <!-- 모바일 ~ 태블릿 GNB -->
+    <div id="m-gnb">
+        <div class="m-gnb-container">
+            <div class="m-gnb-close"><img src="source/img/icons/close.svg" alt="닫기 아이콘"></div>
+            <ul class="m-gnb-d1">
+                <li class="m-d1-item">
+                    <p class="m-gnb-category">기업소개<img src="source/img/icons/banner_next.png" alt="배너의 다음버튼 아이콘"></p>
+                    <ul class="m-gnb-d2">
+                        <li class="m-d2-item"><a href="ceo.html">인사말</a></li>
+                        <li class="m-d2-item"><a href="history.html">연혁</a></li>
+                        <li class="m-d2-item"><a href="way.html">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li class="m-d1-item">
+                    <p class="m-gnb-category">사업영역<img src="source/img/icons/banner_next.png" alt="배너의 다음버튼 아이콘"></p>
+                    <ul class="m-gnb-d2">
+                        <li class="m-d2-item"><a href="architecture.html">건축사업</a></li>
+                        <li class="m-d2-item"><a href="house.html">주택사업</a></li>
+                        <li class="m-d2-item"><a href="civil.html">토목사업</a></li>
+                        <li class="m-d2-item"><a href="landscape.html">조경사업</a></li>
+                    </ul>
+                </li>
+                <li class="m-d1-item">
+                    <p class="m-gnb-category">인재채용<img src="source/img/icons/banner_next.png" alt="배너의 다음버튼 아이콘"></p>
+                    <ul class="m-gnb-d2">
+                        <li class="m-d2-item"><a href="ideal.html">인재상</a></li>
+                        <li class="m-d2-item"><a href="recruiting.html">채용안내</a></li>
+                        <li class="m-d2-item"><a href="employment.html">채용공고</a></li>
+                    </ul>
+                </li>
+                <li class="m-d1-item">
+                    <p class="m-gnb-category">고객센터<img src="source/img/icons/banner_next.png" alt="배너의 다음버튼 아이콘"></p>
+                    <ul class="m-gnb-d2">
+                        <li class="m-d2-item"><a href="news.html">새소식</a></li>
+                        <li class="m-d2-item"><a href="social.html">소셜</a></li>
+                        <li class="m-d2-item"><a href="contact.html">문의사항</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 헤더 gnb 영역 -->
+    <header id="header">
+        <div class="header-container">
+            <a href="index.html" id="h-logo">
+                <img src="source/img/logo/mr_architecture_logo.png" alt="미래건설 로고">
+            </a>
+            <ul id="h-menu">
+                <li class="h-menu-btn">
+                    <a href="ceo.html">기업소개</a>
+                    <ul class="h-depth-2">
+                        <li class="h-d2-item"><a href="ceo.html">인사말</a></li>
+                        <li class="h-d2-item"><a href="history.html">연혁</a></li>
+                        <li class="h-d2-item"><a href="way.html">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li class="h-menu-btn">
+                    <a href="architecture.html">사업영역</a>
+                    <ul class="h-depth-2">
+                        <li class="h-d2-item"><a href="architecture.html">건축사업</a></li>
+                        <li class="h-d2-item"><a href="house.html">주택사업</a></li>
+                        <li class="h-d2-item"><a href="civil.html">토목사업</a></li>
+                        <li class="h-d2-item"><a href="landscape.html">조경사업</a></li>
+                    </ul>
+                </li>
+                <li class="h-menu-btn">
+                    <a href="ideal.html">인재채용</a>
+                    <ul class="h-depth-2">
+                        <li class="h-d2-item"><a href="ideal.html">인재상</a></li>
+                        <li class="h-d2-item"><a href="recruiting.html">채용안내</a></li>
+                        <li class="h-d2-item"><a href="employment.html">채용공고</a></li>
+                    </ul>
+                </li>
+                <li class="h-menu-btn">
+                    <a href="news.html">고객센터</a>
+                    <ul class="h-depth-2">
+                        <li class="h-d2-item"><a href="news.html">새소식</a></li>
+                        <li class="h-d2-item"><a href="social.html">소셜</a></li>
+                        <li class="h-d2-item"><a href="contact.html">문의사항</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="h-submenu">
+                <li class="h-submenu-btn h-search"><img src="source/img/icons/search.png" alt="검색아이콘"></li>
+                <li class="h-submenu-btn h-menu"><img src="source/img/icons/menu.png" alt="메뉴아이콘"></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="subpage" class="newspage">
+        <div class="subpage-container">
+            <!-- 서브페이지의 상단영역 [현재페이지 배너 및 미니 내비게이션] -->
+            <div class="subpage-top">
+                <!-- 현재 페이지의 이름 -->
+                <div class="subpage-title">
+                    <div class="subpage-title-wrap">
+                        <h3>새소식</h3>
+                        <h6>News</h6>
+                    </div>
+                </div>
+                <!-- 서브페이지용 미니 내비게이션 [ 홈 | 카테고리 | 페이지 ] 로 구성돼있음 -->
+                <div class="subpage-top-nav">
+                    <ul class="subpage-nav-list">
+                        <!-- index로 이동하는 홈 버튼 -->
+                        <li class="subpage-nav-item home">
+                            <a href="index.html"><img src="source/img/icons/home_white.svg" alt="홈 아이콘"></a>
+                        </li>
+                        <!-- 카테고리 리스트 -->
+                        <li class="subpage-nav-item category">
+                            <p class="current-category">인재채용 <img class="nav-expand-triangle" src="source/img/icons/triangle_white.svg" alt="확장메뉴 삼각형"></p>
+                            <ul class="subpage-nav-depth2 all-category">
+                                <li class="subpage-nav-d2-item current"><a href="ceo.html">기업소개</a></li>
+                                <li class="subpage-nav-d2-item"><a href="architecture.html">사업영역</a></li>
+                                <li class="subpage-nav-d2-item"><a href="ideal.html">인재채용</a></li>
+                                <li class="subpage-nav-d2-item"><a href="news.html">고객센터</a></li>
+                            </ul>
+                        </li>
+                        <!-- 페이지 리스트 -->
+                        <li class="subpage-nav-item page">
+                            <p class="current-page">고객센터 <img class="nav-expand-triangle" src="source/img/icons/triangle_white.svg" alt="확장메뉴 삼각형"></p>
+                            <ul class="subpage-nav-depth2 all-page">
+                                <li class="subpage-nav-d2-item current"><a href="news.html">새소식</a></li>
+                                <li class="subpage-nav-d2-item"><a href="social.html">소셜</a></li>
+                                <li class="subpage-nav-d2-item"><a href="contact.html">문의사항</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="newspage">
+        <div class="newspage-container">
+            <ul class="newspage-list">
+                <li class="newspage-item">
+                    <a href="#" class="newspage-link">
+                        <div class="newspage-thumbnail"><!--백그라운드 처리--></div>
+                        <ul class="newspage-textarea">
+                            <h6 class="newspage-title">이곳에 새소식 제목을 입력해주세요.</h6>
+                            <p class="newspage-summary">이곳은 새소식의 게시물 내용을 간략히 보여주는 곳입니다.</p>
+                            <span class="newspage-date"><i class="year">2023</i>년 <i class="month">01</i>월 <i class="day">01</i>일</span>
+                        </ul>
+                    </a>
+                </li>
+                <li class="newspage-item">
+                    <a href="#" class="newspage-link">
+                        <div class="newspage-thumbnail"><!--백그라운드 처리--></div>
+                        <ul class="newspage-textarea">
+                            <h6 class="newspage-title">이곳에 새소식 제목을 입력해주세요.</h6>
+                            <p class="newspage-summary">이곳은 새소식의 게시물 내용을 간략히 보여주는 곳입니다.</p>
+                            <span class="newspage-date"><i class="year">2023</i>년 <i class="month">01</i>월 <i class="day">01</i>일</span>
+                        </ul>
+                    </a>
+                </li>
+                <li class="newspage-item">
+                    <a href="#" class="newspage-link">
+                        <div class="newspage-thumbnail"><!--백그라운드 처리--></div>
+                        <ul class="newspage-textarea">
+                            <h6 class="newspage-title">이곳에 새소식 제목을 입력해주세요.</h6>
+                            <p class="newspage-summary">이곳은 새소식의 게시물 내용을 간략히 보여주는 곳입니다.</p>
+                            <span class="newspage-date"><i class="year">2023</i>년 <i class="month">01</i>월 <i class="day">01</i>일</span>
+                        </ul>
+                    </a>
+                </li>
+                <li class="newspage-item">
+                    <a href="#" class="newspage-link">
+                        <div class="newspage-thumbnail"><!--백그라운드 처리--></div>
+                        <ul class="newspage-textarea">
+                            <h6 class="newspage-title">이곳에 새소식 제목을 입력해주세요.</h6>
+                            <p class="newspage-summary">이곳은 새소식의 게시물 내용을 간략히 보여주는 곳입니다.</p>
+                            <span class="newspage-date"><i class="year">2023</i>년 <i class="month">01</i>월 <i class="day">01</i>일</span>
+                        </ul>
+                    </a>
+                </li>
+                <li class="newspage-item">
+                    <a href="#" class="newspage-link">
+                        <div class="newspage-thumbnail"><!--백그라운드 처리--></div>
+                        <ul class="newspage-textarea">
+                            <h6 class="newspage-title">이곳에 새소식 제목을 입력해주세요.</h6>
+                            <p class="newspage-summary">이곳은 새소식의 게시물 내용을 간략히 보여주는 곳입니다.</p>
+                            <span class="newspage-date"><i class="year">2023</i>년 <i class="month">01</i>월 <i class="day">01</i>일</span>
+                        </ul>
+                    </a>
+                </li>
+                <li class="newspage-item">
+                    <a href="#" class="newspage-link">
+                        <div class="newspage-thumbnail"><!--백그라운드 처리--></div>
+                        <ul class="newspage-textarea">
+                            <h6 class="newspage-title">이곳에 새소식 제목을 입력해주세요.</h6>
+                            <p class="newspage-summary">이곳은 새소식의 게시물 내용을 간략히 보여주는 곳입니다.</p>
+                            <span class="newspage-date"><i class="year">2023</i>년 <i class="month">01</i>월 <i class="day">01</i>일</span>
+                        </ul>
+                    </a>
+                </li>
+                <li class="newspage-item">
+                    <a href="#" class="newspage-link">
+                        <div class="newspage-thumbnail"><!--백그라운드 처리--></div>
+                        <ul class="newspage-textarea">
+                            <h6 class="newspage-title">이곳에 새소식 제목을 입력해주세요.</h6>
+                            <p class="newspage-summary">이곳은 새소식의 게시물 내용을 간략히 보여주는 곳입니다.</p>
+                            <span class="newspage-date"><i class="year">2023</i>년 <i class="month">01</i>월 <i class="day">01</i>일</span>
+                        </ul>
+                    </a>
+                </li>
+                <li class="newspage-item">
+                    <a href="#" class="newspage-link">
+                        <div class="newspage-thumbnail"><!--백그라운드 처리--></div>
+                        <ul class="newspage-textarea">
+                            <h6 class="newspage-title">이곳에 새소식 제목을 입력해주세요.</h6>
+                            <p class="newspage-summary">이곳은 새소식의 게시물 내용을 간략히 보여주는 곳입니다.</p>
+                            <span class="newspage-date"><i class="year">2023</i>년 <i class="month">01</i>월 <i class="day">01</i>일</span>
+                        </ul>
+                    </a>
+                </li>
+                <li class="newspage-item">
+                    <a href="#" class="newspage-link">
+                        <div class="newspage-thumbnail"><!--백그라운드 처리--></div>
+                        <ul class="newspage-textarea">
+                            <h6 class="newspage-title">이곳에 새소식 제목을 입력해주세요.</h6>
+                            <p class="newspage-summary">이곳은 새소식의 게시물 내용을 간략히 보여주는 곳입니다.</p>
+                            <span class="newspage-date"><i class="year">2023</i>년 <i class="month">01</i>월 <i class="day">01</i>일</span>
+                        </ul>
+                    </a>
+                </li>
+                <li class="newspage-item">
+                    <a href="#" class="newspage-link">
+                        <div class="newspage-thumbnail"><!--백그라운드 처리--></div>
+                        <ul class="newspage-textarea">
+                            <h6 class="newspage-title">이곳에 새소식 제목을 입력해주세요.</h6>
+                            <p class="newspage-summary">이곳은 새소식의 게시물 내용을 간략히 보여주는 곳입니다.</p>
+                            <span class="newspage-date"><i class="year">2023</i>년 <i class="month">01</i>월 <i class="day">01</i>일</span>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+            <ul class="pagination">
+                <li class="pagination-item">
+                    <ul class="pagination-prev-group">
+                        <li class="page-prev-final disabled"><a href="#"><img src="source/img/icons/firstfinal.svg" alt=""></a></li>
+                        <li class="page-prev-1 disabled"><a href="#"><img src="source/img/icons/prevnext.svg" alt=""></a></li>
+                    </ul>
+                </li>
+                <li class="pagination-item">
+                    <ul class="pagination-pages-group">
+                        <a href="#" class="pagination-each-pages current">1</a>
+                        <a href="#" class="pagination-each-pages">2</a>
+                        <a href="#" class="pagination-each-pages">3</a>
+                        <a href="#" class="pagination-each-pages">4</a>
+                        <a href="#" class="pagination-each-pages">5</a>
+                        <a href="#" class="pagination-each-pages">6</a>
+                        <a href="#" class="pagination-each-pages">7</a>
+                        <a href="#" class="pagination-each-pages">8</a>
+                        <a href="#" class="pagination-each-pages">9</a>
+                        <a href="#" class="pagination-each-pages">10</a>
+                    </ul>
+                </li>
+                <li class="pagination-item">
+                    <ul class="pagination-next-group">
+                        <li class="page-next-1"><a href="#"><img src="source/img/icons/prevnext.svg" alt=""></a></li>
+                        <li class="page-next-final"><a href="#"><img src="source/img/icons/firstfinal.svg" alt=""></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <a href="#" id="footer-logo">
+                    <img src="source/img/logo/mr_architecture_logo.png" alt="푸터로고 자리">
+                </a>
+                <div class="f-vertical"></div>
+                <ul class="footer-topMenu">
+                    <li><a href="index.html" id="f-toHome">홈</a></li>
+                    <li><a href="policy.html" id="f-policy">이용약관</a></li>
+                    <li><a href="toUse.html" id="f-toUse">이용안내</a></li>
+                    <li><a href="personal.html" id="f-personal" class="bolder">개인정보처리방침</a></li>
+                </ul>
+            </div>
+            <div class="m-f-subpages">
+                <div class="m-f-wrap">
+                    <ul class="m-f-depth1 introduce">
+                        <li class="m-f-sub-title"><p>기업소개</p></li>
+                        <li class="m-f-sub-page"><a href="ceo.html">인사말</a></li>
+                        <li class="m-f-sub-page"><a href="history.html">연혁</a></li>
+                        <li class="m-f-sub-page"><a href="way.html">오시는 길</a></li>
+                    </ul>
+                    <ul class="m-f-depth1 business">
+                        <li class="m-f-sub-title"><p>사업영역</p></li>
+                        <li class="m-f-sub-page"><a href="architecture.html">건축사업</a></li>
+                        <li class="m-f-sub-page"><a href="house.html">주택사업</a></li>
+                        <li class="m-f-sub-page"><a href="civil.html">토목사업</a></li>
+                        <li class="m-f-sub-page"><a href="landscape.html">조경사업</a></li>
+                    </ul>
+                    <ul class="m-f-depth1 recruit">
+                        <li class="m-f-sub-title"><p>인재채용</p></li>
+                        <li class="m-f-sub-page"><a href="ideal.html">인재상</a></li>
+                        <li class="m-f-sub-page"><a href="recruiting.html">채용안내</a></li>
+                        <li class="m-f-sub-page"><a href="employment.html">채용정보</a></li>
+                    </ul>
+                    <ul class="m-f-depth1 business">
+                        <li class="m-f-sub-title"><p>고객센터</p></li>
+                        <li class="m-f-sub-page"><a href="news.html">새소식</a></li>
+                        <li class="m-f-sub-page"><a href="social.html">소셜</a></li>
+                        <li class="m-f-sub-page"><a href="contact.html">문의사항</a></li>
+                    </ul>
+                </div>
+                <div class="m-f-subpages-btn">
+                    <div class="m-f-open">
+                        <p>전체메뉴 열기</p>
+                    </div>
+                    <div class="m-f-close hidden">
+                        <p>전체메뉴 닫기</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-subpages">
+                <ul class="footer-depth 1">
+                    <li class="sub-title"><a href="#">기업소개</a></li>
+                    <li class="sub-normal"><a href="#">인사말</a></li>
+                    <li class="sub-normal"><a href="#">연혁</a></li>
+                    <li class="sub-normal"><a href="#">오시는 길</a></li>
+                </ul>
+                <ul class="footer-depth 2">
+                    <li class="sub-title"><a href="#">사업영역</a></li>
+                    <li class="sub-normal"><a href="#">건축사업</a></li>
+                    <li class="sub-normal"><a href="#">주택사업</a></li>
+                    <li class="sub-normal"><a href="#">토목사업</a></li>
+                    <li class="sub-normal"><a href="#">조경사업</a></li>
+                </ul>
+                <!--
+                <ul class="footer-depth 3">
+                    <li class="sub-title"><a href="#">포트폴리오</a></li>
+                    <li class="sub-normal"><a href="#">건축사업</a></li>
+                    <li class="sub-normal"><a href="#">주택사업</a></li>
+                    <li class="sub-normal"><a href="#">토목사업</a></li>
+                    <li class="sub-normal"><a href="#">조경사업</a></li>
+                </ul>
+            -->
+                <ul class="footer-depth 4">
+                    <li class="sub-title"><a href="#">인재채용</a></li>
+                    <li class="sub-normal"><a href="#">인재상</a></li>
+                    <li class="sub-normal"><a href="#">채용안내</a></li>
+                    <li class="sub-normal"><a href="#">채용정보</a></li>
+                </ul>
+                <ul class="footer-depth 5">
+                    <li class="sub-title"><a href="#">고객센터</a></li>
+                    <li class="sub-normal"><a href="#">새소식</a></li>
+                    <li class="sub-normal"><a href="#">소셜</a></li>
+                    <li class="sub-normal"><a href="#">문의사항</a></li>
+                </ul>
+            </div>
+            <div class="f-horizontal"></div>
+            <div class="footer-socials">
+                <ul class="social-lists">
+                    <li class="f-socialItem youtube"><a href="#"></a></li>
+                    <li class="f-socialItem kakao"><a href="#"></a></li>
+                    <li class="f-socialItem instagram"><a href="#"></a></li>
+                    <li class="f-socialItem twitter"><a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="f-horizontal"></div>
+            <div class="footer-siteInfo">
+                <ul class="f-infoLine">
+                    <li>상호명 : (주)미래건설</li>
+                    <li>대표자 : 홍길동</li>
+                    <li>개인정보책임자 : 고길동</li>
+                </ul>
+                <ul class="f-infoLine">
+                    <li>사업자등록번호 : 000-00-00000</li>
+                    <li>통신판매업신고번호 : 제0000-대한민국-0000호</li>
+                </ul>
+                <ul class="f-infoLine">
+                    <li>연락처 : 000-000-0000,000-000-0001</li>
+                    <li>팩스 : 000-000-0000,000-000-0001</li>
+                    <li>이메일 : webuild@mirae.com</li>
+                </ul>
+                <ul class="f-infoLine">
+                    <li>주소 : 대한민국 대한특별시 민국구 독립로 815 만세빌딩 31층</li>
+                </ul>
+                <ul class="f-infoLine copyright">
+                    <li>Copyright © 2023 미래건설. All rights reserved.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <script type="text/javascript" src="js/subpage.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.mainBanner').slick({
+                infinite: true,
+                dots: true,
+            });
+        });
+    </script>
+
+</body>
+
+</html>

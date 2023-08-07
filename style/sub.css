@@ -65,6 +65,9 @@
 #subpage.employment .subpage-title {
     background-image: url(../source/img/talent/employment.top_banner.jpg);
 }
+#subpage.newspage .subpage-title {
+    background-image: url(../source/img/cs/news_top_banner.jpg);
+}
 #subpage .subpage-title::after {
     content: '';
     position: absolute;
@@ -1308,7 +1311,7 @@
     color: var(--primary-color);
     font-weight: 400;
 }
-#employment .pagination {
+.pagination {
     position: relative;
     width: 100%; height: auto;
     margin-top: 24px;
@@ -1318,39 +1321,39 @@
     grid-gap: 3rem;
     font-size: 1.2rem;
 }
-#employment .pagination-item {
+.pagination-item {
     position: relative;
     width: auto; height: auto;
 }
-#employment .pagination-item > ul {
+.pagination-item > ul {
     position: relative;
     width: auto; height: auto;
     display: flex; flex-direction: row;
     grid-gap: 1rem;
 }
-#employment .pagination-item a {
+.pagination-item a {
     color: #333;
 }
-#employment .pagination-item a img {
+.pagination-item a img {
     width: auto; height: 1.2rem;
 }
-#employment .pagination-next-group a img {
+.pagination-next-group a img {
     transform: rotate(180deg);
 }
-#employment .pagination-item .disabled a {
+.pagination-item .disabled a {
     cursor: default;
     opacity: 0.5;
 }
-#employment .pagination-each-pages {
+.pagination-each-pages {
     position: relative;
     width: 1.8rem; height: 1.8rem;
     display: flex; flex-direction: row;
     justify-content: center; align-items: center;
 }
-#employment .pagination-each-pages.current {
+.pagination-each-pages.current {
     color: #fff
 }
-#employment .pagination-each-pages.current::after {
+.pagination-each-pages.current::after {
     content: '';
     position: absolute;
     left: 0; top: 0;
@@ -1359,6 +1362,91 @@
     background: var(--primary-color);
     box-sizing: border-box;
     z-index: -1;
+}
+
+#newspage {
+    position: relative;
+    width: 100%; height: auto;
+    padding: var(--topbottom-padding);
+    color: #333;
+}
+#newspage .newspage-container {
+    position: relative;
+    width: 100%; height: auto;
+    display: flex; flex-direction: column;
+    padding: var(--grid-padding);
+    grid-gap: var(--grid-gap);
+}
+#newspage .newspage-list {
+    position: relative;
+    width: 100%; height: auto;
+    display: flex; flex-direction: column;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+#newspage .newspage-item {
+    position: relative;
+    width: 100%; height: auto;
+    border-bottom: 1px solid #cfcfcf;
+}
+#newspage .newspage-item:last-child {
+    border-bottom: none;
+}
+#newspage .newspage-link {
+    position: relative;
+    width: 100%; height: auto;
+    padding: var(--grid-gap) 0;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: var(--grid-gap);
+    color: #333;
+}
+#newspage .newspage-thumbnail {
+    position: relative;
+    width: 100%; height: auto;
+    grid-column: 1/4;
+    background: url(../source/img/cs/newspage_thumbnail.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#newspage .newspage-textarea {
+    position: relative;
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    grid-gap: 1rem;
+    grid-column: 4/13;
+}
+#newspage .newspage-title {
+    position: relative;
+    width: auto; height: auto;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+#newspage .newspage-summary {
+    position: relative;
+    width: auto; height: auto;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #666;
+}
+#newspage .newspage-date {
+    position: relative;
+    width: auto; height: auto;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #666;
+}
+#newspage .newspage-date i {
+    font-style: normal;
 }
 
 /* 1025 ~ 1200 대응 **/
@@ -1724,7 +1812,7 @@
     #employment .employment-filters {
         grid-gap: 1rem;
     }
-    #employment .pagination {
+    .pagination {
         grid-gap: 2rem;
         font-size: 1rem;
     }
@@ -1880,19 +1968,19 @@
         font-size: 1.2rem;
     }
 
-    #employment .pagination {
+    .pagination {
         grid-gap: 1.4rem;
     }
-    #employment .pagination-item > ul {
+    .pagination-item > ul {
         grid-gap: 0.8rem;
     }
-    #employment .pagination-item:nth-child(2) > ul {
+    .pagination-item:nth-child(2) > ul {
         flex-wrap: wrap;
     }
-    #employment .pagination-item a img {
+    .pagination-item a img {
         height: 1rem;
     }
-    #employment .pagination-each-pages {
+    .pagination-each-pages {
         width: 1.4rem; height: 1.4rem;
     }
 }
