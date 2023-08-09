@@ -68,6 +68,9 @@
 #subpage.newspage .subpage-title {
     background-image: url(../source/img/cs/news_top_banner.jpg);
 }
+#subpage.contact .subpage-title {
+    background-image: url(../source/img/cs/contact_top_banner.jpg);
+}
 #subpage .subpage-title::after {
     content: '';
     position: absolute;
@@ -1364,6 +1367,7 @@
     z-index: -1;
 }
 
+/* 새소식 **/
 #newspage {
     position: relative;
     width: 100%; height: auto;
@@ -1452,6 +1456,72 @@
 }
 #newspage .newspage-date i {
     font-style: normal;
+}
+
+/* 문의사항 **/
+#contact {
+    position: relative;
+    width: 100%; height: auto;
+    padding: var(--topbottom-padding);
+    color: #333;
+}
+#contact .contact-container {
+    position: relative;
+    width: 100%; height: auto;
+    padding: var(--grid-padding);
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(3,auto-fit);
+}
+#contact .contact-container>* {
+    position: relative;
+    width: 100%; height: auto;
+    grid-column: 3/11;
+}
+#contact #contact-form {
+    position: relative;
+    width: 100%; height: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    grid-gap: var(--grid-gap);
+}
+#contact .contact-each-wrap {
+    position: relative;
+    width: 100%; height: auto;
+    display: flex; flex-direction: column;
+    grid-gap: 0.5rem;
+}
+#contact .contact-each-wrap:first-child, #contact .contact-each-wrap:nth-child(4), #contact .contact-each-wrap:nth-child(5) {
+    grid-column: 1/3;
+}
+#contact .contact-each-wrap label {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+#contact input[type="text"], #contact textarea {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+}
+#contact .contact-cuation {
+    position: relative;
+    width: 100%; height: auto;
+    margin-top: 1rem;
+    font-weight: 500;
+    color: red;
+}
+#contact #contact-submit {
+    position: relative;
+    width: fit-content; height: auto;
+    margin-top: var(--grid-gap); padding: 0.8rem 24px;
+    display: flex; flex-direction: row;
+    justify-self: center;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
 }
 
 /* 1025 ~ 1200 대응 **/
