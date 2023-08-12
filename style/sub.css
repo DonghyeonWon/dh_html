@@ -1625,6 +1625,14 @@
         font-size: 1rem;
         line-height: 1.2;
     }
+
+    /* 문의사항 **/
+    #contact .contact-container>* {
+        grid-column: 2/12;
+    }
+    #contact input[type="text"], #contact textarea {
+        font-size: 1rem;
+    }
 }
 
 /* 769 ~ 1024 대응 **/
@@ -1781,6 +1789,11 @@
     #newspage .newspage-title {
         font-size: 1.4rem;
     }
+
+    /* 문의사항 **/
+    #contact .contact-container>* {
+        grid-column: 1/13;
+    }
 }
 
 /* 641 ~ 768 대응 **/
@@ -1926,6 +1939,14 @@
     }
     #newspage .newspage-date {
         font-size: 0.8rem;
+    }
+
+    /* 문의사항 **/
+    #contact #contact-form {
+        grid-template-columns: 1fr;
+    }
+    #contact .contact-each-wrap:first-child, #contact .contact-each-wrap:nth-child(4), #contact .contact-each-wrap:nth-child(5) {
+        grid-column: auto;
     }
 }
 
@@ -2102,6 +2123,22 @@
     #newspage .newspage-title {
         font-size: 1rem;
     }
+
+    /* 문의사항 **/
+    #contact .contact-each-wrap label {
+        font-size: 1rem;
+    }
+    #contact input[type="text"], #contact textarea {
+        padding: 0.5rem;
+    }
+    #contact .contact-cuation {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    #contact #contact-submit {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
 }
 
 /* 321 ~ 480 대응 **/
@@ -2270,6 +2307,15 @@
     /* 새소식 **/
     #newspage .newspage-link {
         grid-gap: 0.5rem;
+    }
+
+    /* 문의사항 **/
+    #contact input[type="text"], #contact textarea {
+        font-size: 0.8rem;
+    }
+    #contact #contact-submit {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
     }
 }
 
