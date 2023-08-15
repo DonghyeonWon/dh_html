@@ -1527,14 +1527,14 @@
     cursor: pointer;
 }
 
-/* 개인정보처리방침 **/
-#privacypage {
+/* 정책페이지 공통 **/
+.policy-common{
     position: relative;
     width: 100%; height: auto;
     padding: var(--topbottom-padding);
     color: #333;
 }
-#privacypage .privacypage-container {
+.policy-common-container {
     position: relative;
     width: 100%; height: auto;
     padding: var(--grid-padding);
@@ -1543,27 +1543,27 @@
     grid-template-rows: repeat(auto, fit-content);
     grid-row-gap: 4rem;
 }
-#privacypage .privacy-section {
+.policy-common-section {
     position: relative;
     width: 100%; height: auto;
     grid-column: 2/12;
     display: flex; flex-direction: column;
     grid-gap: 1.5rem;
 }
-#privacypage .privacy-title {
+.policy-common-title {
     font-size: 1.4rem;
     font-weight: 500;
     color: #000;
     line-height: 1.2;
 }
-#privacypage .privacy-subtitle {
+.policy-common-subtitle {
     font-size: 1rem;
     font-weight: 500;
     color: #000;
     line-height: 1.2;
     font-style: normal;
 }
-#privacypage .privacy-contents {
+.policy-common-contents {
     font-size: 1rem;
     color: #666;
     line-height: 2;
@@ -2185,8 +2185,8 @@
         letter-spacing: 2px;
     }
 
-    /* 개인정보처리방침 **/
-    #privacypage .privacy-section {
+    /* 정책페이지 공통 **/
+    .policy-common-section {
         grid-column: 1/13;
     }
 }
@@ -2368,17 +2368,17 @@
         font-size: 0.8rem;
     }
 
-    /* 개인정보처리방침 **/
-    #privacypage .privacypage-container {
+    /* 정책페이지 공통 **/
+    .policy-common-container {
         grid-row-gap: 3rem;
     }
-    #privacypage .privacy-title {
+    .policy-common-title {
         font-size: 1.1rem;
     }
-    #privacypage .privacy-subtitle {
+    .policy-common-subtitle {
         font-size: 0.8rem;
     }
-    #privacypage .privacy-contents {
+    .policy-common-contents {
         font-size: 0.8rem;
     }
 }
