@@ -10,6 +10,8 @@ var socialIconHeight = $('.social-icon').innerHeight(); //소셜영역 소셜아
 //var socialItemHeight = $('#custom .social-item').innerHeight(); //소셜영역 소셜아이템 높이
 var socialItem = $('#custom .social-item');
 var beforeScrollTop = 0; //이전 스크롤값 저장
+var hSearchBtn = $('.h-search');
+var hSearchClose = $('.common-search-close');
 
 $(document).ready(function(){
     //처음 시작할때 웹페이지 너비가 600이하일 때 실행하는
@@ -73,6 +75,14 @@ $(document).ready(function(){
     $('#m-gnb .m-d1-item').click(function(){
         $(this).siblings().removeClass('active');
         $(this).toggleClass('active');
+    });
+
+    //검색창 여닫기
+    hSearchBtn.click(function(){
+        $('#common-search').addClass('active');
+    });
+    hSearchClose.click(function(){
+        $('#common-search').removeClass('active');
     });
 
     //푸터 서브메뉴 여닫기
